@@ -5,7 +5,7 @@ import ChiDuoi from "./category/ChiDuoi";
 import ChiTren from "./category/ChiTren";
 import DauMatCo from "./category/DauMatCo";
 import LongNguc from "./category/LongNguc";
-import TKTW from "./category/TKTW";
+import TkTw from "./category/TKTW";
 import { useAppContext } from "../../components/GlobalStyles/context/AppContext";
 
 const cx = classNames.bind(styles);
@@ -26,7 +26,7 @@ function Content() {
                 ) : longNguc === true ? (
                     <LongNguc />
                 ) : TKTW === true ? (
-                    <TKTW />
+                    <TkTw />
                 ) : (
                     ""
                 )}

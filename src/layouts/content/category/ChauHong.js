@@ -13,7 +13,9 @@ function ChauHong() {
                         src={item.src}
                         width="950"
                         height="550"
-                        allow="autoplay"
+                        frameborder="0"
+                        allowfullscreen=""
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     ></iframe>
                 </div>
             ))}
