@@ -12,6 +12,13 @@ import HeaderLessons from "./HeaderLessons/HeaderLessons";
 
 function LessonsVideo() {
     const { lessonsId } = useParams();
+    const title =
+        (lessonsId === "chauHong" && "Chậu hông") ||
+        (lessonsId === "chiDuoi" && "Chi dưới") ||
+        (lessonsId === "chiTren" && "Chi trên") ||
+        (lessonsId === "dauMatCo" && "Đầu mặt cổ") ||
+        (lessonsId === "longNguc" && "Lồng ngực") ||
+        (lessonsId === "tktw" && "Thần kinh trung ương");
     const lessonsData =
         (lessonsId === "chauHong" && CHAU_HONG) ||
         (lessonsId === "chiDuoi" && CHI_DUOI) ||
@@ -21,7 +28,7 @@ function LessonsVideo() {
         (lessonsId === "tktw" && TKTW);
     return (
         <>
-            <HeaderLessons lessonsData={lessonsData} />
+            <HeaderLessons title={title} />
             <ListVideo lessonsData={lessonsData} />
         </>
     );

@@ -4,16 +4,14 @@ import { Link, useParams } from "react-router-dom";
 import icon from "../../../assets/icon";
 const cx = classNames.bind(styles);
 
-function HeaderLessons({ lessonsData }) {
-    const { lessonsId } = useParams();
-
+function HeaderLessons({ title }) {
     return (
         <div className={cx("header-lessons")}>
             <Link to={"/"} className={cx("title")}>
                 <div className={cx("back")}>
                     <img src={icon.back} />
                 </div>
-                <h3>{lessonsId}</h3>
+                <h3>{title}</h3>
             </Link>
         </div>
     );
