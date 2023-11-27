@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const AppContext = createContext();
 
@@ -7,8 +7,8 @@ export const Contexts = ({ children }) => {
     const [selecTitle, setSelecTitle] = useState(null);
     const [active, setActive] = useState(0);
 
-    const handleOpen = (src, i, title) => {
-        setActive(i);
+    const handleOpen = (src, id, title) => {
+        setActive(id);
         setSelectedVideo(src);
         setSelecTitle(title);
     };

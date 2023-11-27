@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./content.module.scss";
 import img from "../../../assets/img";
 import lessons from "../../../components/lessons/lessons";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 

@@ -6,20 +6,8 @@ import { useEffect } from "react";
 const cx = classNames.bind(styles);
 
 function ListVideo({ lessonsData }) {
-    const {
-        selectedVideo,
-        setSelectedVideo,
-        selecTitle,
-        setSelecTitle,
-        active,
-        handleOpen,
-    } = useAppContext();
-    useEffect(() => {
-        if (lessonsData.length > 0) {
-            setSelectedVideo(lessonsData[0].src);
-            setSelecTitle(lessonsData[0].title);
-        }
-    }, [lessonsData]);
+    const { selectedVideo, selecTitle, active, handleOpen } = useAppContext();
+
     return (
         <div className={cx("lessons")}>
             <div className={cx("lesson")}>
@@ -40,12 +28,14 @@ function ListVideo({ lessonsData }) {
                     </div>
                 </div>
                 <div className={cx("nav-bar")}>
-                    {lessonsData.map((item, i) => (
+                    {lessonsData.map((item) => (
                         <button
-                            onClick={() => handleOpen(item.src, i, item.title)}
-                            key={i}
+                            onClick={() =>
+                                handleOpen(item.src, item.id, item.title)
+                            }
+                            key={item.id}
                             className={cx("button", {
-                                active: i === active,
+                                active: item.id === active,
                             })}
                         >
                             <p>{item.title}</p>

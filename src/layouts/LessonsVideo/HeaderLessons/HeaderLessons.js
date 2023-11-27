@@ -2,12 +2,19 @@ import classNames from "classnames/bind";
 import styles from "./HeaderLessons.module.scss";
 import { Link, useParams } from "react-router-dom";
 import icon from "../../../assets/icon";
+import { useAppContext } from "../../../components/context/AppContext";
 const cx = classNames.bind(styles);
 
 function HeaderLessons({ title }) {
+    const { setSelectedVideo, setSelecTitle, setActive } = useAppContext();
+    const handleClose = () => {
+        setSelectedVideo(null);
+        setSelecTitle(null);
+        setActive(null);
+    };
     return (
         <div className={cx("header-lessons")}>
-            <Link to={"/"} className={cx("title")}>
+            <Link onClick={handleClose} to={"/"} className={cx("title")}>
                 <div className={cx("back")}>
                     <img src={icon.back} />
                 </div>
