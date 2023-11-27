@@ -1,4 +1,7 @@
 .header-lessons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #29303b;
     height: 50px;
     .title {
@@ -24,5 +27,8 @@
             font-weight: 500;
             line-height: 32px;
         }
+    }
+    .search {
+        margin-right: 100px;
     }
 }

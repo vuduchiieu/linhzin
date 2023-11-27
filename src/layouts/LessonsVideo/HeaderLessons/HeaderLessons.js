@@ -3,6 +3,7 @@ import styles from "./HeaderLessons.module.scss";
 import { Link, useParams } from "react-router-dom";
 import icon from "../../../assets/icon";
 import { useAppContext } from "../../../components/context/AppContext";
+import Search from "../../Home/header/Search/Search";
 const cx = classNames.bind(styles);
 
 function HeaderLessons({ title }) {
@@ -20,6 +21,9 @@ function HeaderLessons({ title }) {
                 </div>
                 <h3>{title}</h3>
             </Link>
+            <div className={cx("search")}>
+                <Search />
+            </div>
         </div>
     );
 }

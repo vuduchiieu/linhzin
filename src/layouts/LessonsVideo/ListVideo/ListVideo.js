@@ -6,7 +6,23 @@ import { useEffect } from "react";
 const cx = classNames.bind(styles);
 
 function ListVideo({ lessonsData }) {
-    const { selectedVideo, selecTitle, active, handleOpen } = useAppContext();
+    const {
+        selectedVideo,
+        setSelectedVideo,
+        selecTitle,
+        setSelecTitle,
+        active,
+        setActive,
+        handleOpen,
+    } = useAppContext();
+    console.log(active);
+    useEffect(() => {
+        if (active === null) {
+            setSelectedVideo(lessonsData[0].src);
+            setSelecTitle(lessonsData[0].title);
+            setActive(lessonsData[0].id);
+        }
+    }, [lessonsData]);
 
     return (
         <div className={cx("lessons")}>
