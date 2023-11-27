@@ -1,11 +1,10 @@
 import classNames from "classnames/bind";
 import styles from "./header.module.scss";
-import icon from "../../../assets/icon/icon";
+import icon from "../../../assets/icon";
 import { Link } from "react-router-dom";
 import img from "../../../assets/img";
 
 const cx = classNames.bind(styles);
-
 function Header() {
     return (
         <div className={cx("wrap")}>

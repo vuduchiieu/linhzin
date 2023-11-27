@@ -2,9 +2,10 @@ import classNames from "classnames/bind";
 import styles from "./content.module.scss";
 import img from "../../../assets/img";
 import lessons from "../../../components/lessons/lessons";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const cx = classNames.bind(styles);
+
 function Content() {
     return (
         <div className={cx("wrap")}>
@@ -22,7 +23,10 @@ function Content() {
                                 className={cx("lessons")}
                             >
                                 <img src={item.img} />
-                                <h3>{item.title}</h3>
+                                <div className={cx("title")}>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.length} video</p>
+                                </div>
                             </Link>
                         ))}
                     </div>

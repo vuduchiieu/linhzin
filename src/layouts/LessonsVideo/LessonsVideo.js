@@ -8,7 +8,7 @@ import {
     LONG_NGUC,
     TKTW,
 } from "../../components/categorys/categorys";
-import Header from "../Home/header/Header";
+import HeaderLessons from "./HeaderLessons/HeaderLessons";
 
 function LessonsVideo() {
     const { lessonsId } = useParams();
@@ -21,7 +21,7 @@ function LessonsVideo() {
         (lessonsId === "tktw" && TKTW);
     return (
         <>
-            <Header />
+            <HeaderLessons lessonsData={lessonsData} />
             <ListVideo lessonsData={lessonsData} />
         </>
     );
