@@ -9,12 +9,12 @@ function HeaderLessons({ lessonsData }) {
 
     return (
         <div className={cx("header-lessons")}>
-            <div className={cx("title")}>
-                <Link className={cx("back")} to={"/"}>
+            <Link to={"/"} className={cx("title")}>
+                <div className={cx("back")}>
                     <img src={icon.back} />
-                </Link>
+                </div>
                 <h3>{lessonsId}</h3>
-            </div>
+            </Link>
         </div>
     );
 }
