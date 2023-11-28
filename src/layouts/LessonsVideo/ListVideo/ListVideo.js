@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./listVideo.module.scss";
 import { useAppContext } from "../../../components/context/AppContext";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -14,8 +14,9 @@ function ListVideo({ lessonsData }) {
         active,
         setActive,
         handleOpen,
+        activeButtonRef,
     } = useAppContext();
-    console.log(active);
+
     useEffect(() => {
         if (active === null) {
             setSelectedVideo(lessonsData[0].src);
@@ -31,8 +32,6 @@ function ListVideo({ lessonsData }) {
                     <div className={cx("video")}>
                         {selectedVideo && (
                             <iframe
-                                width="1300"
-                                height="737"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 src={selectedVideo}
                             ></iframe>
@@ -53,6 +52,7 @@ function ListVideo({ lessonsData }) {
                             className={cx("button", {
                                 active: item.id === active,
                             })}
+                            ref={item.id === active ? activeButtonRef : null}
                         >
                             <p>{item.title}</p>
                         </button>

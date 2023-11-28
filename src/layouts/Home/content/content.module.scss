@@ -76,7 +76,7 @@
 
 @media (min-width: 0px) and (max-width: 739px) {
     .content {
-        width: 335px;
+        max-width: 335px;
         padding-top: 20px;
         .video-lessons {
             margin-top: 20px;

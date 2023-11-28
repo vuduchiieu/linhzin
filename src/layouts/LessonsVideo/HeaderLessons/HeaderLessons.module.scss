@@ -8,7 +8,6 @@
         display: flex;
         align-items: center;
         height: 100%;
-
         .back {
             display: flex;
             align-items: center;
@@ -30,5 +29,29 @@
     }
     .search {
         margin-right: 100px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 739px) {
+    .header-lessons {
+        min-width: 375px;
+        height: 40px;
+        .title {
+            .back {
+                width: 40px;
+                margin: 0;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            h3 {
+                width: 140px;
+                font-size: 14px;
+            }
+        }
+        .search {
+            margin-left: 30px;
+        }
     }
 }

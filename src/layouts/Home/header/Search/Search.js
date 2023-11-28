@@ -73,7 +73,8 @@ function Search() {
             <div className={cx("seach")}>
                 <img src={icon.seach} spellCheck={false} />
                 <input
-                    autocomplete="off"
+                    contenteditable="true"
+                    spellCheck="false"
                     ref={inputRef}
                     value={searchValue}
                     type="search"

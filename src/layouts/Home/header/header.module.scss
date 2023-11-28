@@ -38,7 +38,7 @@
         .header {
             display: flex;
             justify-content: space-between;
-            width: 375px;
+            min-width: 375px;
             margin: 0;
             .logo {
                 margin: 0;

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 export const AppContext = createContext();
 
@@ -12,6 +12,10 @@ export const Contexts = ({ children }) => {
         setSelectedVideo(src);
         setSelecTitle(title);
     };
+    const activeButtonRef = useRef(null);
+    useEffect(() => {
+        activeButtonRef.current.scrollIntoView({ behavior: "smooth" });
+    }, []);
     return (
         <AppContext.Provider
             value={{
@@ -22,6 +26,7 @@ export const Contexts = ({ children }) => {
                 active,
                 setActive,
                 handleOpen,
+                activeButtonRef,
             }}
         >
             {children}
