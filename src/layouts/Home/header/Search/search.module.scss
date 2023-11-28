@@ -101,5 +101,9 @@
     .seach {
         width: 161px;
         height: 33px;
+        input::placeholder {
+            overflow: hidden;
+            font-size: 12px;
+        }
     }
 }
