@@ -46,6 +46,7 @@
                     opacity: 0.8;
                 }
                 img {
+                    border-radius: 10px;
                     width: 116px;
                     height: 116px;
                 }
@@ -76,9 +77,14 @@
 @media (min-width: 0px) and (max-width: 739px) {
     .content {
         width: 335px;
+        padding-top: 20px;
         .video-lessons {
-            margin-top: 30px;
+            margin-top: 20px;
             height: 524px;
+            h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
             .wrap {
                 margin: 0;
                 padding: 0;
@@ -90,7 +96,12 @@
             }
         }
         .text-lessons {
+            margin-top: 20px;
             height: 100px;
+            h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
         }
     }
 }
