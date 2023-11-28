@@ -7,7 +7,7 @@
             .video {
                 display: flex;
                 justify-content: center;
-                min-width: 1570px;
+                width: 1570px;
                 height: 737px;
                 background: #fff;
                 box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
@@ -70,6 +70,7 @@
 @media (min-width: 0px) and (max-width: 739px) {
     .lessons {
         height: 769px;
+
         .lesson {
             display: flex;
             flex-direction: column;
@@ -77,12 +78,12 @@
                 .video {
                     display: flex;
                     flex-direction: column;
-                    iframe {
-                        max-width: 370px;
-                        max-height: 245px;
-                    }
-                    width: 335px;
+                    min-width: 375px;
                     height: 324px;
+                    iframe {
+                        width: 370px;
+                        height: 245px;
+                    }
                 }
                 .title {
                     margin: 10px;
