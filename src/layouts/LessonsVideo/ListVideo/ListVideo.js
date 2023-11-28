@@ -14,8 +14,8 @@ function ListVideo({ lessonsData }) {
         active,
         setActive,
         handleOpen,
-        activeButtonRef,
     } = useAppContext();
+    const activeButtonRef = useRef(null);
 
     useEffect(() => {
         if (active === null) {
@@ -24,6 +24,11 @@ function ListVideo({ lessonsData }) {
             setActive(lessonsData[0].id);
         }
     }, [lessonsData]);
+    useEffect(() => {
+        if (activeButtonRef.current) {
+            activeButtonRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [active, activeButtonRef]);
 
     return (
         <div className={cx("lessons")}>
