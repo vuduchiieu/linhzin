@@ -78,7 +78,7 @@
                 .video {
                     display: flex;
                     flex-direction: column;
-                    width: 375px;
+                    max-width: 375px;
                     height: 324px;
                     iframe {
                         width: 370px;
