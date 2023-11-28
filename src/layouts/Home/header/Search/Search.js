@@ -44,6 +44,7 @@ function Search() {
     return (
         <Tippy
             interactive
+            placement="bottom-end"
             visible={showResult}
             render={(attrs) => (
                 <div tabIndex="-1" {...attrs} className={cx("seach-result")}>
