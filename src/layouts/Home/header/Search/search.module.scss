@@ -61,3 +61,42 @@
         overflow: visible;
     }
 }
+@media (min-width: 0px) and (max-width: 739px) {
+    .seach-result {
+        width: 330px;
+        .result {
+            position: relative;
+            margin: 10px;
+            height: 30px;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                background: #d2d1d6;
+                width: 320px;
+                height: 1px;
+            }
+            &:last-child::before {
+                content: none;
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+
+            .info {
+                h3 {
+                    color: #1a162e;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .seach {
+        width: 161px;
+        height: 33px;
+    }
+}

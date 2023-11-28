@@ -72,3 +72,22 @@
         margin-top: 40px;
     }
 }
+
+@media (min-width: 0px) and (max-width: 739px) {
+    .content {
+        width: 335px;
+        .video-lessons {
+            margin-top: 30px;
+            height: 464px;
+            overflow: auto;
+            .wrap {
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+                .lessons {
+                    width: 325px;
+                }
+            }
+        }
+    }
+}

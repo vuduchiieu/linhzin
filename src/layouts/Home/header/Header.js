@@ -12,7 +12,9 @@ function Header() {
                 <Link to={"/"} className={cx("logo")}>
                     <h1>category</h1>
                 </Link>
-                <Search />
+                <div className={cx("search")}>
+                    <Search />
+                </div>
                 <div className={cx("profile")}>
                     <img src={img.avt} />
                 </div>
