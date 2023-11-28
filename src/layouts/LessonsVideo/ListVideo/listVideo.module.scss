@@ -69,6 +69,7 @@
 }
 @media (min-width: 0px) and (max-width: 739px) {
     .lessons {
+        width: 375px;
         height: 769px;
 
         .lesson {
@@ -78,7 +79,7 @@
                 .video {
                     display: flex;
                     flex-direction: column;
-                    max-width: 375px;
+                    width: 375px;
                     height: 324px;
                     iframe {
                         max-width: 374px;
