@@ -1,5 +1,5 @@
 .lessons {
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     background-color: #f6f6f6;
     .main {
         .content {
@@ -7,7 +7,6 @@
                 display: flex;
                 justify-content: center;
                 min-width: 80vw;
-
                 height: 80vh;
                 background: #fff;
                 box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
@@ -71,8 +70,6 @@
         display: flex;
         justify-content: end;
         align-items: center;
-        position: fixed;
-        bottom: 0;
         height: 50px;
         width: 100%;
         .wrapper {
