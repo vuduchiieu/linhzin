@@ -34,8 +34,7 @@
 
 @media (min-width: 0px) and (max-width: 739px) {
     .header-lessons {
-        width: 430px;
-        height: 40px;
+        min-width: 375px;
         .title {
             .back {
                 width: 40px;
