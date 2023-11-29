@@ -72,6 +72,7 @@
         align-items: center;
         height: 50px;
         width: 100%;
+        margin-top: 10px;
         .wrapper {
             display: flex;
             align-items: center;
@@ -79,7 +80,7 @@
                 width: 145px;
                 height: 100%;
                 overflow: hidden;
-                text-wrap: nowrap;
+                white-space: nowrap;
                 text-overflow: ellipsis;
                 font-size: 18px;
                 font-weight: 500;
@@ -126,6 +127,9 @@
                 height: 30vh;
                 overflow-x: auto;
             }
+        }
+        .footer {
+            justify-content: start;
         }
     }
 }
