@@ -1,20 +1,20 @@
 .lessons {
-    height: 920px;
+    height: calc(100vh - 50px);
     background-color: #f6f6f6;
-    .lesson {
-        display: flex;
+    .main {
         .content {
             .video {
                 display: flex;
                 justify-content: center;
-                width: 1570px;
-                height: 737px;
+                min-width: 80vw;
+
+                height: 80vh;
                 background: #fff;
                 box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
                 background-color: #000;
                 iframe {
-                    width: 1300px;
-                    height: 737px;
+                    width: 85%;
+                    height: 100%;
                 }
             }
             .title {
@@ -29,11 +29,12 @@
             display: flex;
             flex-direction: column;
             padding: 20px;
-            width: 345px;
-            height: 737px;
+            width: 20vw;
+            height: 80vh;
             border-radius: 20px;
             background: #fff;
             box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+            overflow-y: auto;
             .button {
                 position: relative;
                 margin: 10px 0;
@@ -55,34 +56,59 @@
                 }
                 p {
                     text-align: left;
-                    color: #1a162e;
+                    color: var(--text-color);
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 22px;
                 }
             }
             .active {
-                background-color: #ffb700;
+                background-color: var(--primari-color);
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        .wrapper {
+            display: flex;
+            align-items: center;
+            p {
+                width: 145px;
+                height: 100%;
+                overflow: hidden;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 32px;
+            }
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            :hover {
+                cursor: pointer;
             }
         }
     }
 }
 @media (min-width: 0px) and (max-width: 739px) {
     .lessons {
-        width: 430px;
-        height: 100%;
-        .lesson {
+        .main {
             display: flex;
             flex-direction: column;
             .content {
                 .video {
-                    display: flex;
                     flex-direction: column;
-                    width: 430px;
-                    height: 324px;
+                    height: 50vh;
                     iframe {
-                        width: 430px;
-                        height: 245px;
+                        width: 100%;
                     }
                 }
                 .title {
@@ -99,8 +125,8 @@
             .nav-bar {
                 display: flex;
                 flex-direction: column;
-                width: 430px;
-                height: 324px;
+                width: 90vw;
+                height: 30vh;
                 overflow-x: auto;
             }
         }
