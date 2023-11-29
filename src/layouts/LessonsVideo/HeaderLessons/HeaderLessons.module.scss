@@ -2,10 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #29303b;
-    height: 50px;
     position: sticky;
     top: 0;
+    background-color: #29303b;
+    height: 50px;
     .title {
         display: flex;
         align-items: center;
@@ -29,8 +29,14 @@
             line-height: 32px;
         }
     }
-    .search {
-        margin-right: 100px;
+    .profile {
+        margin-right: 30px;
+        img {
+            border-radius: 50%;
+            height: 50px;
+            object-fit: cover;
+            width: 50px;
+        }
     }
 }
 
@@ -50,9 +56,6 @@
                 width: 180px;
                 font-size: 16px;
             }
-        }
-        .search {
-            margin: 0;
         }
     }
 }

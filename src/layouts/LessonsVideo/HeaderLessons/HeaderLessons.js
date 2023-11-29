@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import icon from "../../../assets/icon";
 import { useAppContext } from "../../../components/context/AppContext";
 import Search from "../../Home/header/Search/Search";
+import img from "../../../assets/img";
 const cx = classNames.bind(styles);
 
 function HeaderLessons({ title }) {
@@ -23,6 +24,9 @@ function HeaderLessons({ title }) {
             </Link>
             <div className={cx("search")}>
                 <Search />
+            </div>
+            <div className={cx("profile")}>
+                <img src={img.avt} />
             </div>
         </div>
     );
