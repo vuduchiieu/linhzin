@@ -23,9 +23,8 @@ function ListVideo({ lessonsData }) {
     useEffect(() => {
         const handleWindowResize = () => {
             const newWidth = window.innerWidth;
-            console.log(newWidth);
             setWidth(newWidth);
-            if (newWidth < 1570) {
+            if (newWidth <= 1570) {
                 setOnOff(false);
             } else {
                 setOnOff(true);
@@ -35,7 +34,7 @@ function ListVideo({ lessonsData }) {
         return () => {
             window.removeEventListener("resize", handleWindowResize);
         };
-    }, []);
+    }, [width]);
 
     useEffect(() => {
         if (active === null) {
