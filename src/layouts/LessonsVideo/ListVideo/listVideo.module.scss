@@ -70,8 +70,10 @@
         display: flex;
         justify-content: end;
         align-items: center;
-        position: sticky;
+        position: fixed;
         bottom: 0;
+        right: 0;
+        left: 0;
         height: 50px;
         margin: 10px 0 0 10px;
         margin-top: 10px;
