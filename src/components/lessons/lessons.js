@@ -39,4 +39,25 @@ const lessons = [
     },
 ];
 
-export default lessons;
+const textLessons = [
+    {
+        title: "Đang cập nhật...",
+        img: "",
+        length: "",
+        to: "",
+    },
+    {
+        title: "Đang cập nhật...",
+        img: "",
+        length: "",
+        to: "",
+    },
+    {
+        title: "Đang cập nhật...",
+        img: "",
+        length: "",
+        to: "",
+    },
+];
+
+export { lessons, textLessons };
