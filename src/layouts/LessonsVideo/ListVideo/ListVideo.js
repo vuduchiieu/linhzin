@@ -24,9 +24,9 @@ function ListVideo({ lessonsData }) {
         const handleWindowResize = () => {
             const newWidth = window.innerWidth;
             setWidth(newWidth);
-            if (newWidth < 739) {
+            if (newWidth < 739 && newWidth > 729) {
                 setOnOff(true);
-            } else if (newWidth < 1570) {
+            } else if (newWidth < 1570 && newWidth > 1560) {
                 setOnOff(false);
             }
         };
