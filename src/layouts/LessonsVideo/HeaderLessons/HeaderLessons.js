@@ -26,7 +26,7 @@ function HeaderLessons({ title }) {
                 <Search />
             </div>
             <div className={cx("profile")}>
-                
+                <img src={img.avt} />
             </div>
         </div>
     );
