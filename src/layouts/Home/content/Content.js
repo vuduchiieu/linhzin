@@ -46,7 +46,6 @@ function Content() {
                                     opacity: 1,
                                 }}
                             >
-                                {/* <img src={item.img} /> */}
                                 <div className={cx("title")}>
                                     <h3>{item.title}</h3>
                                     <p>{item.length} </p>
