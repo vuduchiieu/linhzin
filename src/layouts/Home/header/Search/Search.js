@@ -57,7 +57,8 @@ function Search() {
                                         item.src,
                                         item.id,
                                         item.title,
-                                        setShowResult(!showResult)
+                                        setShowResult(!showResult),
+                                        setSearchValue("")
                                     )
                                 }
                                 className={cx("info")}

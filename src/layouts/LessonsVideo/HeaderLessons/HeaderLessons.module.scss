@@ -44,6 +44,7 @@
     .header-lessons {
         min-width: 375px;
         .title {
+            order: -1;
             .back {
                 width: 40px;
                 margin: 0;
@@ -56,6 +57,10 @@
                 width: 180px;
                 font-size: 16px;
             }
+        }
+        .profile {
+            margin: 0;
+            order: -1;
         }
     }
 }

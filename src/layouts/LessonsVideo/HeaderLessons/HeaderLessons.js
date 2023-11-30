@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./HeaderLessons.module.scss";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import icon from "../../../assets/icon";
 import { useAppContext } from "../../../components/context/AppContext";
 import Search from "../../Home/header/Search/Search";
