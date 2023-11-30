@@ -28,8 +28,6 @@ function ListVideo({ lessonsData }) {
                 setOnOff(true);
             } else if (newWidth < 1570) {
                 setOnOff(false);
-            } else {
-                setOnOff(true);
             }
         };
         window.addEventListener("resize", handleWindowResize);
