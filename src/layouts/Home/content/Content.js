@@ -3,6 +3,7 @@ import styles from "./content.module.scss";
 import img from "../../../assets/img";
 import { textLessons, lessons } from "../../../components/lessons/lessons";
 import { Link } from "react-router-dom";
+import icon from "../../../assets/icon";
 
 const cx = classNames.bind(styles);
 
@@ -12,7 +13,7 @@ function Content() {
             <div className={cx("content")}>
                 <div className={cx("banner")}>
                     <img src={img.banner} />
-                    <img src={img.phone} />
+                    <div></div>
                 </div>
                 <div className={cx("video-lessons")}>
                     <h2>Bài học video</h2>
