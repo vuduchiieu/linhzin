@@ -19,12 +19,23 @@
                 rgba(228, 143, 69, 1) 40%
             );
             overflow: hidden;
-            img {
+            img:first-child {
                 margin-left: 30px;
                 object-fit: cover;
                 height: 150%;
+                animation: moveImage 1.5s infinite alternate;
+                @keyframes moveImage {
+                    0% {
+                        transform: rotate(4deg);
+                    }
+                    100% {
+                        transform: rotate(-6deg);
+                    }
+                }
             }
-            div {
+            img:last-child {
+                height: 50%;
+                align-self: flex-end;
             }
         }
         .video-lessons,
