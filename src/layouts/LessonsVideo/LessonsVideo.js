@@ -9,6 +9,7 @@ import {
     TKTW,
 } from "../../components/categorys/categorys";
 import HeaderLessons from "./HeaderLessons/HeaderLessons";
+import NotFound from "../../components/NotFound/NotFound";
 
 function LessonsVideo() {
     const { lessonsId } = useParams();
@@ -26,6 +27,23 @@ function LessonsVideo() {
         (lessonsId === "dauMatCo" && DAU_MAT_CO) ||
         (lessonsId === "longNguc" && LONG_NGUC) ||
         (lessonsId === "tktw" && TKTW);
+    if (!lessonsData) {
+        return (
+            <>
+                <HeaderLessons />
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                    }}
+                >
+                    <div>
+                        <NotFound />
+                    </div>
+                </div>
+            </>
+        );
+    }
     return (
         <>
             <HeaderLessons title={title} />

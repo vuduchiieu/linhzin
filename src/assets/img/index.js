@@ -8,6 +8,7 @@ const img = {
     dauMatCo: require("./dau-mat-co.jpg"),
     longNguc: require("./long-nguc.jpg"),
     tktw: require("./tktw.jpg"),
+    notFound: require("./NotFound.gif"),
 };
 
 export default img;
