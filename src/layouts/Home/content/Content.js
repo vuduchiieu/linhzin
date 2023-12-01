@@ -13,6 +13,7 @@ function Content() {
             <div className={cx("content")}>
                 <div className={cx("banner")}>
                     <img src={img.banner} />
+                    <img src={img.ambulance} />
                     <img src={img.hospital} />
                 </div>
                 <div className={cx("video-lessons")}>
