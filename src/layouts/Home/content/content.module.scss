@@ -107,7 +107,8 @@
             .banner {
                 height: 156px;
             }
-            .video-lessons {
+            .video-lessons,
+            .text-lessons {
                 margin-top: 20px;
                 height: 524px;
                 h2 {
@@ -122,14 +123,6 @@
                     .lessons {
                         width: 80%;
                     }
-                }
-            }
-            .text-lessons {
-                margin-top: 20px;
-                height: 100px;
-                h2 {
-                    font-size: 20px;
-                    margin-bottom: 10px;
                 }
             }
         }
