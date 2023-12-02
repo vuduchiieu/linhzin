@@ -39,7 +39,7 @@
 .seach {
     display: flex;
     align-items: center;
-    border: 2px solid #fff;
+    border: transparent;
     width: 361px;
     height: 46px;
     border-radius: 92px;
@@ -47,7 +47,10 @@
     width: 420px;
 
     &:focus-within {
-        border: 1px solid #1a162e;
+        background-color: #d2d1d6;
+    }
+    img {
+        margin-left: 10px;
     }
     input {
         padding: 0 16px 0 8px;
