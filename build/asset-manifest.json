@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7b46da2.css",
+    "main.js": "/static/js/main.9405b842.js",
+    "static/js/787.7ff39ff7.chunk.js": "/static/js/787.7ff39ff7.chunk.js",
+    "static/media/NotFound.gif": "/static/media/NotFound.694315f98b3e02890fef.gif",
+    "static/media/Hình ảnh.png": "/static/media/Hình ảnh.77c651710a2ca4c1a5d1.png",
+    "static/media/chi-tren.jpg": "/static/media/chi-tren.dbdf5e8181165de21dcb.jpg",
+    "static/media/chi-duoi.jpg": "/static/media/chi-duoi.bb9bc9a169805625be7e.jpg",
+    "static/media/ambulance.png": "/static/media/ambulance.4c34a13559b1a155ad0c.png",
+    "static/media/tktw.jpg": "/static/media/tktw.9e0abad4ec1540f45ed2.jpg",
+    "static/media/long-nguc.jpg": "/static/media/long-nguc.0ab0f618fc6f2c2d53f1.jpg",
+    "static/media/hospital.png": "/static/media/hospital.fbfa3e581118c6dbedb9.png",
+    "static/media/chau-hong.jpg": "/static/media/chau-hong.697b9d06a363b4f99237.jpg",
+    "static/media/dau-mat-co.jpg": "/static/media/dau-mat-co.97e2ffcd7df55aa7de1f.jpg",
+    "static/media/Close Square.svg": "/static/media/Close Square.10ea1e2e34b2418f7a4dec08cc9eb4b9.svg",
+    "index.html": "/index.html",
+    "static/media/search.svg": "/static/media/search.a378252d96e458cde50ca20d52c37a8b.svg",
+    "static/media/arrow - top.svg": "/static/media/arrow - top.ee4bd3f3a2d753eaa4f2f1bbc4fd06c9.svg",
+    "static/media/Arrow - Left.svg": "/static/media/Arrow - Left.1f7bd4cbebc3eb87b0461b9b9511a3fe.svg",
+    "main.c7b46da2.css.map": "/static/css/main.c7b46da2.css.map",
+    "main.9405b842.js.map": "/static/js/main.9405b842.js.map",
+    "787.7ff39ff7.chunk.js.map": "/static/js/787.7ff39ff7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7b46da2.css",
+    "static/js/main.9405b842.js"
+  ]
+}
