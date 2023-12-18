@@ -1,17 +1,19 @@
 import { useParams } from "react-router-dom";
 import ListVideo from "./ListVideo/ListVideo";
-import {
-    CHAU_HONG,
-    CHI_DUOI,
-    CHI_TREN,
-    DAU_MAT_CO,
-    LONG_NGUC,
-    TKTW,
-} from "../../components/categorys/categorys";
 import HeaderLessons from "./HeaderLessons/HeaderLessons";
 import NotFound from "../../components/NotFound/NotFound";
+import { useContext } from "react";
+import { AppContext } from "../../components/context/AppContext";
 
 function LessonsVideo() {
+    const {
+        chauHong,
+        chiDuoi,
+        chiTren,
+        dauMatCo,
+        longNguc,
+        thanKinhTrungUong,
+    } = useContext(AppContext);
     const { lessonsId } = useParams();
     const title =
         (lessonsId === "chauHong" && "Chậu hông") ||
@@ -21,12 +23,12 @@ function LessonsVideo() {
         (lessonsId === "longNguc" && "Lồng ngực") ||
         (lessonsId === "tktw" && "Thần kinh trung ương");
     const lessonsData =
-        (lessonsId === "chauHong" && CHAU_HONG) ||
-        (lessonsId === "chiDuoi" && CHI_DUOI) ||
-        (lessonsId === "chiTren" && CHI_TREN) ||
-        (lessonsId === "dauMatCo" && DAU_MAT_CO) ||
-        (lessonsId === "longNguc" && LONG_NGUC) ||
-        (lessonsId === "tktw" && TKTW);
+        (lessonsId === "chauHong" && chauHong) ||
+        (lessonsId === "chiDuoi" && chiDuoi) ||
+        (lessonsId === "chiTren" && chiTren) ||
+        (lessonsId === "dauMatCo" && dauMatCo) ||
+        (lessonsId === "longNguc" && longNguc) ||
+        (lessonsId === "tktw" && thanKinhTrungUong);
     if (!lessonsData) {
         return (
             <>

@@ -6,14 +6,6 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
 import { useAppContext } from "../../../../components/context/AppContext";
-import {
-    CHAU_HONG,
-    CHI_DUOI,
-    CHI_TREN,
-    DAU_MAT_CO,
-    LONG_NGUC,
-    TKTW,
-} from "../../../../components/categorys/categorys";
 
 const cx = classNames.bind(styles);
 
@@ -22,19 +14,27 @@ function Search() {
     const [result, setResult] = useState([]);
     const [showResult, setShowResult] = useState(false);
     const inputRef = useRef();
-    const { handleOpen } = useAppContext();
+    const {
+        handleOpen,
+        chauHong,
+        chiDuoi,
+        chiTren,
+        dauMatCo,
+        longNguc,
+        thanKinhTrungUong,
+    } = useAppContext();
     useEffect(() => {
         if (!searchValue) {
             setResult([]);
             return;
         }
         const filteredResult = [
-            ...CHAU_HONG,
-            ...CHI_DUOI,
-            ...CHI_TREN,
-            ...DAU_MAT_CO,
-            ...LONG_NGUC,
-            ...TKTW,
+            ...chauHong,
+            ...chiDuoi,
+            ...chiTren,
+            ...dauMatCo,
+            ...longNguc,
+            ...thanKinhTrungUong,
         ].filter((item) =>
             item.title.toLowerCase().includes(searchValue.toLowerCase())
         );

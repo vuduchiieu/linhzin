@@ -1,13 +1,16 @@
 import classNames from "classnames/bind";
-import styles from "./content.module.scss";
-import img from "../../../assets/img";
-import { textLessons, lessons } from "../../../components/lessons/lessons";
 import { Link } from "react-router-dom";
-import icon from "../../../assets/icon";
+import styles from "./content.module.scss";
+import { useContext } from "react";
+import img from "../../../assets/img";
+import { textLessons } from "../../../components/lessons/lessons";
+import { AppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 
 function Content() {
+    const { lessons } = useContext(AppContext);
+
     return (
         <div className={cx("wrap")}>
             <div className={cx("content")}>
