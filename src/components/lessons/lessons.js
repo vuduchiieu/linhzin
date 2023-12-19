@@ -1,5 +1,3 @@
-import img from "../../assets/img";
-
 const textLessons = [
     {
         title: "Đang cập nhật...",
