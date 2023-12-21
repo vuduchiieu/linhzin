@@ -12,7 +12,7 @@ function ChiTiet({ setChiTiet, ghichu }) {
 
     const [newGhiChu, setNewGhiChu] = useState({
         title: ghichu.title,
-        desc: ghichu.title,
+        desc: ghichu.desc,
     });
     const handleSave = async () => {
         try {
