@@ -27,6 +27,12 @@
             position: relative;
             width: 100%;
             margin-top: 10px;
+            h3,
+            p {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
             &:hover {
                 cursor: pointer;
                 border-radius: 6px;

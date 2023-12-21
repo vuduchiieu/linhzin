@@ -1,5 +1,6 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import img from "../../assets/img";
+import axios from "axios";
 
 export const AppContext = createContext();
 
@@ -241,6 +242,21 @@ export const Contexts = ({ children }) => {
         },
     ]);
 
+    const [listGhiChu, setListGhiChu] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(
+                    "https://be-linhzin.vercel.app/api/v1/ghichus"
+                );
+                setListGhiChu(response.data.data);
+            } catch (error) {
+                console.error("Error fetching existing users:", error);
+            }
+        };
+        fetchData();
+    }, []);
+
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [selecTitle, setSelecTitle] = useState(null);
     const [active, setActive] = useState(0);
@@ -261,6 +277,8 @@ export const Contexts = ({ children }) => {
                 dauMatCo,
                 longNguc,
                 thanKinhTrungUong,
+                listGhiChu,
+                setListGhiChu,
                 selectedVideo,
                 setSelectedVideo,
                 selecTitle,

@@ -5,11 +5,11 @@ import img from "../../../assets/img";
 import Search from "./Search/Search";
 import icon from "../../../assets/icon";
 import { useState } from "react";
-import MiniDocument from "./MiniDocument/MiniDocument";
+import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
 
 const cx = classNames.bind(styles);
 function Header() {
-    const [document, setDocument] = useState(false);
+    const [ghiChu, setGhiChu] = useState(false);
     return (
         <div className={cx("wrap")}>
             <div className={cx("header")}>
@@ -22,14 +22,14 @@ function Header() {
                 <div className={cx("document")}>
                     <img
                         onClick={() => {
-                            setDocument(!document);
+                            setGhiChu(!ghiChu);
                         }}
                         src={icon.document}
                         alt=""
                     />
-                    {document && (
+                    {ghiChu && (
                         <div className={cx("popper")}>
-                            <MiniDocument setDocument={setDocument} />
+                            <MiniGhiChu setGhiChu={setGhiChu} ghiChu={ghiChu} />
                         </div>
                     )}
                 </div>
