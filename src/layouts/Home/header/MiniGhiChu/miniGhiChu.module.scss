@@ -10,6 +10,7 @@
             width: 32px;
             height: 32px;
         }
+
         ::before {
             content: "";
             position: absolute;
@@ -27,6 +28,9 @@
             position: relative;
             width: 100%;
             margin-top: 10px;
+            h3 {
+                font-weight: 500;
+            }
             h3,
             p {
                 overflow: hidden;
