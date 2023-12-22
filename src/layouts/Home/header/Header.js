@@ -4,12 +4,31 @@ import { Link } from "react-router-dom";
 import img from "../../../assets/img";
 import Search from "./Search/Search";
 import icon from "../../../assets/icon";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
 
 const cx = classNames.bind(styles);
 function Header() {
     const [ghiChu, setGhiChu] = useState(false);
+    const filterRef = useRef(null);
+    const handleClickOutside = (e) => {
+        if (filterRef.current && !filterRef.current.contains(e.target)) {
+            setGhiChu(false);
+        }
+    };
+    useEffect(() => {
+        const handleKeyPress = (e) => {
+            if (e.key === "Escape") {
+                setGhiChu(false);
+            }
+        };
+        document.addEventListener("keydown", handleKeyPress);
+        document.addEventListener("click", handleClickOutside);
+        return () => {
+            document.removeEventListener("keydown", handleKeyPress);
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
     return (
         <div className={cx("wrap")}>
             <div className={cx("header")}>
@@ -19,7 +38,7 @@ function Header() {
                 <div className={cx("search")}>
                     <Search />
                 </div>
-                <div className={cx("document")}>
+                <div className={cx("document")} ref={filterRef}>
                     <img
                         onClick={() => {
                             setGhiChu(!ghiChu);
@@ -29,7 +48,7 @@ function Header() {
                     />
                     {ghiChu && (
                         <div className={cx("popper")}>
-                            <MiniGhiChu setGhiChu={setGhiChu} ghiChu={ghiChu} />
+                            <MiniGhiChu setGhiChu={setGhiChu} />
                         </div>
                     )}
                 </div>

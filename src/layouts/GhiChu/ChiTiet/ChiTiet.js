@@ -1,32 +1,42 @@
 import classNames from "classnames/bind";
 import styles from "./chitiet.module.scss";
 import icon from "../../../assets/icon";
-import { useContext, useState } from "react";
-import { AppContext } from "../../../components/context/AppContext";
+import { useState } from "react";
 import axios from "axios";
 
 const cx = classNames.bind(styles);
 
 function ChiTiet({ setChiTiet, ghichu }) {
-    const { listGhiChu, setListGhiChu } = useContext(AppContext);
-
     const [newGhiChu, setNewGhiChu] = useState({
+        id: ghichu.id,
         title: ghichu.title,
         desc: ghichu.desc,
     });
     const handleSave = async () => {
-        try {
-            await axios.post(
-                "https://be-linhzin.vercel.app/api/v1/create",
-                newGhiChu
-            );
-            setNewGhiChu({
-                title: "",
-                desc: "",
-            });
-            window.location.href = "/ghichu";
-        } catch (error) {
-            console.error("Error creating user:", error);
+        if (ghichu.id === undefined) {
+            try {
+                await axios.post(
+                    "https://be-linhzin.vercel.app/api/v1/create",
+                    newGhiChu
+                );
+                setNewGhiChu({
+                    title: "",
+                    desc: "",
+                });
+                window.location.href = "/ghichu";
+            } catch (error) {
+                console.error("Error creating user:", error);
+            }
+        } else if (ghichu.id !== undefined) {
+            try {
+                await axios.put(
+                    "https://be-linhzin.vercel.app/api/v1/update",
+                    newGhiChu
+                );
+                window.location.href = "/ghichu";
+            } catch (error) {
+                console.error("Error creating user:", error);
+            }
         }
     };
     return (

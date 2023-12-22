@@ -17,6 +17,7 @@
                 button {
                     padding: 10px 20px;
                     border-radius: 16px;
+                    color: var(--text-color);
                     background-color: #77dae6;
                     &:hover {
                         cursor: pointer;
@@ -42,6 +43,10 @@
                             overflow: hidden;
                             white-space: nowrap;
                             text-overflow: ellipsis;
+                        }
+                        &:hover {
+                            opacity: 0.8;
+                            cursor: pointer;
                         }
                     }
                     .action {

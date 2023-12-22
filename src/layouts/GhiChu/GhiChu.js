@@ -56,7 +56,12 @@ function GhiChu() {
                             <div className={cx("wrap-list")}>
                                 {listGhiChu.map((item, i) => (
                                     <div className={cx("list-ghi-chu")} key={i}>
-                                        <div className={cx("ghichu")}>
+                                        <div
+                                            onClick={() => {
+                                                handleChiTiet(i);
+                                            }}
+                                            className={cx("ghichu")}
+                                        >
                                             <h3>{item.title}</h3>
                                             <p>{item.desc}</p>
                                         </div>
