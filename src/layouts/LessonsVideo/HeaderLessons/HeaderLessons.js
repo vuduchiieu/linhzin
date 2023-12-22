@@ -18,7 +18,7 @@ function HeaderLessons({ title }) {
         <div className={cx("header-lessons")}>
             <Link onClick={handleClose} to={"/"} className={cx("title")}>
                 <div className={cx("back")}>
-                    <img src={icon.back} />
+                    <img src={icon.backLesson} />
                 </div>
                 <h3>{title}</h3>
             </Link>

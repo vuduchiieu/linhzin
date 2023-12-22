@@ -55,8 +55,9 @@ function GhiChu() {
                                         setChiTiet(true);
                                     }}
                                 >
-                                    Ghi chú mới
+                                    <img src={icon.add} />
                                 </button>
+                                <p>Ghi chú mới</p>
                             </div>
                             <div className={cx("wrap-list")}>
                                 {listGhiChu.map((item, i) => (

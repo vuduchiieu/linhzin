@@ -13,16 +13,22 @@
         background-color: #fff;
         div {
             .ghi-chu-moi {
+                display: flex;
+                align-items: center;
                 margin: 20px 0 10px 30px;
                 button {
-                    padding: 10px 20px;
-                    border-radius: 16px;
+                    padding: 6px 8px;
+                    border-radius: 10px;
                     color: var(--text-color);
                     background-color: #77dae6;
                     &:hover {
                         cursor: pointer;
                         opacity: 0.8;
                     }
+                }
+                p {
+                    margin-left: 10px;
+                    font-weight: 500;
                 }
             }
             .wrap-list {
