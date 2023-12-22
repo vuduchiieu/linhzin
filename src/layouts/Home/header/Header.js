@@ -9,17 +9,17 @@ import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
 
 const cx = classNames.bind(styles);
 function Header() {
-    const [ghiChu, setGhiChu] = useState(false);
+    const [togleGhiChu, setTogleGhiChu] = useState(false);
     const filterRef = useRef(null);
     const handleClickOutside = (e) => {
         if (filterRef.current && !filterRef.current.contains(e.target)) {
-            setGhiChu(false);
+            setTogleGhiChu(false);
         }
     };
     useEffect(() => {
         const handleKeyPress = (e) => {
             if (e.key === "Escape") {
-                setGhiChu(false);
+                setTogleGhiChu(false);
             }
         };
         document.addEventListener("keydown", handleKeyPress);
@@ -41,14 +41,14 @@ function Header() {
                 <div className={cx("document")} ref={filterRef}>
                     <img
                         onClick={() => {
-                            setGhiChu(!ghiChu);
+                            setTogleGhiChu(!togleGhiChu);
                         }}
                         src={icon.document}
                         alt=""
                     />
-                    {ghiChu && (
+                    {togleGhiChu && (
                         <div className={cx("popper")}>
-                            <MiniGhiChu setGhiChu={setGhiChu} />
+                            <MiniGhiChu setTogleGhiChu={setTogleGhiChu} />
                         </div>
                     )}
                 </div>

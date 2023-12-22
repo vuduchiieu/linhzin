@@ -260,6 +260,8 @@ export const Contexts = ({ children }) => {
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [selecTitle, setSelecTitle] = useState(null);
     const [active, setActive] = useState(0);
+    const [ghichu, setGhiChu] = useState([]);
+    const [chitiet, setChiTiet] = useState(false);
 
     const handleOpen = (src, id, title) => {
         setActive(id);
@@ -286,6 +288,10 @@ export const Contexts = ({ children }) => {
                 active,
                 setActive,
                 handleOpen,
+                ghichu,
+                setGhiChu,
+                chitiet,
+                setChiTiet,
             }}
         >
             {children}

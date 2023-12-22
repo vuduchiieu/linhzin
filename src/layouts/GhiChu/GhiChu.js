@@ -10,9 +10,14 @@ import axios from "axios";
 const cx = classNames.bind(styles);
 
 function GhiChu() {
-    const { listGhiChu, setListGhiChu } = useContext(AppContext);
-    const [ghichu, setGhiChu] = useState([]);
-    const [chitiet, setChiTiet] = useState(false);
+    const {
+        listGhiChu,
+        setListGhiChu,
+        ghichu,
+        setGhiChu,
+        chitiet,
+        setChiTiet,
+    } = useContext(AppContext);
 
     const handleChiTiet = (i) => {
         setGhiChu(listGhiChu[i]);

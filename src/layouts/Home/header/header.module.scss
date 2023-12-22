@@ -28,9 +28,11 @@
         }
         .document {
             position: relative;
+
             flex-grow: 0.1;
             img {
                 cursor: pointer;
+                height: 24px;
             }
             .popper {
                 position: absolute;

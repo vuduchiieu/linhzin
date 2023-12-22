@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./chitiet.module.scss";
 import icon from "../../../assets/icon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const cx = classNames.bind(styles);
@@ -39,6 +39,16 @@ function ChiTiet({ setChiTiet, ghichu }) {
             }
         }
     };
+
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        setIsMounted(true);
+        return () => {
+            if (isMounted) {
+                setChiTiet(false);
+            }
+        };
+    }, [isMounted]);
     return (
         <div className={cx("chi-tiet")}>
             <div className={cx("header")}>
