@@ -1,0 +1,117 @@
+.seach-result {
+    overflow-y: auto;
+    max-height: min((100vh - 96px) - 60px, 434px);
+    width: 420px;
+    border-radius: 20px;
+    background-color: #292e39;
+    box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+    h3 {
+        color: #fff;
+    }
+    .result {
+        position: relative;
+        margin: 10px;
+        height: 40px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            background: #d2d1d6;
+            width: 395px;
+            height: 1px;
+        }
+        &:last-child::before {
+            content: none;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+
+        .info {
+            h3 {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 32px;
+                height: 100%;
+            }
+        }
+    }
+}
+.seach {
+    display: flex;
+    align-items: center;
+    border: transparent;
+    width: 361px;
+    height: 46px;
+    border-radius: 92px;
+    transition: 0.2s ease-in-out;
+    width: 420px;
+
+    &:focus-within {
+        background-color: #292e39;
+    }
+    img {
+        margin-left: 10px;
+    }
+    input {
+        margin-left: 10px;
+        width: 100%;
+        caret-color: #444;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 0 4px;
+        overflow: visible;
+        &::placeholder {
+            color: #fff;
+        }
+    }
+}
+@media (min-width: 0px) and (max-width: 739px) {
+    .seach-result {
+        width: 330px;
+        .result {
+            position: relative;
+            margin: 10px;
+            height: 30px;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                background: #d2d1d6;
+                width: 320px;
+                height: 1px;
+            }
+            &:last-child::before {
+                content: none;
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+
+            .info {
+                h3 {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height: 100%;
+                    white-space: nowrap;
+                    color: var(--text-color);
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    .seach {
+        width: 161px;
+        height: 33px;
+        input::placeholder {
+            overflow: hidden;
+            font-size: 12px;
+        }
+    }
+}

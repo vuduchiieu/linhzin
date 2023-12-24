@@ -48,7 +48,13 @@ function GhiChu() {
                         <ChiTiet setChiTiet={setChiTiet} ghichu={ghichu} />
                     ) : (
                         <div>
-                            <div className={cx("ghi-chu-moi")}>
+                            <div
+                                onClick={() => {
+                                    setGhiChu([]);
+                                    setChiTiet(true);
+                                }}
+                                className={cx("ghi-chu-moi")}
+                            >
                                 <button
                                     onClick={() => {
                                         setGhiChu([]);

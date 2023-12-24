@@ -15,16 +15,15 @@
             .ghi-chu-moi {
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 margin: 20px 0 10px 30px;
+
                 button {
                     padding: 6px 8px;
                     border-radius: 10px;
                     color: var(--text-color);
                     background-color: #77dae6;
-                    &:hover {
-                        cursor: pointer;
-                        opacity: 0.8;
-                    }
+                    cursor: pointer;
                 }
                 p {
                     margin-left: 10px;

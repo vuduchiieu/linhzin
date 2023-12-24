@@ -1,5 +1,6 @@
 const icon = {
     seach: require("./search.svg").default,
+    searchLesson: require("./searchLesson.svg").default,
     back: require("./Arrow - Left.svg").default,
     backLesson: require("./Arrow - Left lesson.svg").default,
     top: require("./arrow - top.svg").default,

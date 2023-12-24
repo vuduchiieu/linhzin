@@ -1,6 +1,11 @@
 .lessons {
     min-height: calc(100vh - 50px);
-    background-color: #f6f6f6;
+    background-color: #292e39;
+    h3,
+    p {
+        color: #fff;
+    }
+
     .main {
         .content {
             .video {
@@ -8,7 +13,7 @@
                 justify-content: center;
                 min-width: 80vw;
                 height: 70vh;
-                box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+                box-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
                 background-color: #000;
                 iframe {
                     width: 85%;
@@ -30,8 +35,8 @@
             width: 20vw;
             height: 80vh;
             border-radius: 20px;
-            background: #fff;
-            box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+            background: #171c28;
+            box-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
             overflow-y: auto;
             .button {
                 position: relative;
@@ -39,7 +44,7 @@
                 width: 100%;
                 padding: 15px;
                 border-radius: 10px;
-                background: #f6f6f6;
+                background: #171c28;
                 &::before {
                     content: "";
                     position: absolute;
@@ -54,14 +59,13 @@
                 }
                 p {
                     text-align: left;
-                    color: var(--text-color);
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 22px;
                 }
             }
             .active {
-                background-color: var(--primari-color);
+                background-color: #292e39;
             }
         }
     }
@@ -81,7 +85,7 @@
         padding: 10px 0 0 10px;
         margin-top: 10px;
         z-index: 999;
-        background-color: #fff;
+        background-color: #171c28;
         .wrapper {
             display: flex;
             align-items: center;

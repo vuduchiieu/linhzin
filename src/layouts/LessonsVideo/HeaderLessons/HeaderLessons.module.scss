@@ -4,7 +4,7 @@
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: #29303b;
+    background-color: #171c28;
     height: 50px;
     .title {
         display: flex;
@@ -35,9 +35,7 @@
     .document {
         position: relative;
         flex-grow: 0.25;
-
         img {
-            margin-top: 6px;
             cursor: pointer;
         }
         .popper {
@@ -47,8 +45,14 @@
             width: 322px;
             height: 376px;
             border-radius: 20px;
-            background: #fff;
+            background: #29303b;
             box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+            h3 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+            }
         }
     }
     .profile {

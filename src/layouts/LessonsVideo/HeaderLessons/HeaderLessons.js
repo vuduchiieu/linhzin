@@ -3,7 +3,7 @@ import styles from "./HeaderLessons.module.scss";
 import { Link } from "react-router-dom";
 import icon from "../../../assets/icon";
 import { useAppContext } from "../../../components/context/AppContext";
-import Search from "../../Home/header/Search/Search";
+import Search from "./Search/Search";
 import img from "../../../assets/img";
 import MiniGhiChu from "../../Home/header/MiniGhiChu/MiniGhiChu";
 const cx = classNames.bind(styles);

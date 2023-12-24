@@ -26,6 +26,7 @@
         height: 296px;
         .content {
             position: relative;
+            cursor: pointer;
             width: 100%;
             margin-top: 10px;
             h3,
@@ -39,19 +40,7 @@
                 font-size: 14px;
                 font-weight: 500;
             }
-            &:hover {
-                cursor: pointer;
-                border-radius: 6px;
-                background: var(
-                    --Yellow-Yellow-30,
-                    linear-gradient(
-                        0deg,
-                        rgba(255, 255, 255, 0.7) 0%,
-                        rgba(255, 255, 255, 0.7) 100%
-                    ),
-                    var(--primari-color)
-                );
-            }
+
             ::before {
                 content: "";
                 position: absolute;
