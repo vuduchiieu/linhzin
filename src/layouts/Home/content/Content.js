@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import styles from "./content.module.scss";
 import { useContext } from "react";
 import img from "../../../assets/img";
-import { textLessons } from "../../../components/lessons/lessons";
 import { AppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 
 function Content() {
-    const { lessons } = useContext(AppContext);
+    const { lessons, textLessons } = useContext(AppContext);
 
     return (
         <div className={cx("wrap")}>

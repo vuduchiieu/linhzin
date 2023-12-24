@@ -29,6 +29,28 @@
             line-height: 32px;
         }
     }
+    .search {
+        flex-grow: 0.6;
+    }
+    .document {
+        position: relative;
+        flex-grow: 0.25;
+
+        img {
+            margin-top: 6px;
+            cursor: pointer;
+        }
+        .popper {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 322px;
+            height: 376px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+        }
+    }
     .profile {
         margin-right: 30px;
         img {
@@ -56,6 +78,9 @@
                 width: 180px;
                 font-size: 16px;
             }
+        }
+        .document {
+            order: 1;
         }
         .profile {
             display: none;

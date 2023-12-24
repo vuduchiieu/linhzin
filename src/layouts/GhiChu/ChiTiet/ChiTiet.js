@@ -1,12 +1,14 @@
 import classNames from "classnames/bind";
 import styles from "./chitiet.module.scss";
 import icon from "../../../assets/icon";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { AppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 
 function ChiTiet({ setChiTiet, ghichu }) {
+    const { setListGhiChu, listGhiChu } = useContext(AppContext);
     const [newGhiChu, setNewGhiChu] = useState({
         id: ghichu.id,
         title: ghichu.title,
@@ -23,7 +25,8 @@ function ChiTiet({ setChiTiet, ghichu }) {
                     title: "",
                     desc: "",
                 });
-                window.location.href = "/ghichu";
+                setListGhiChu([...listGhiChu, newGhiChu]);
+                setChiTiet(false);
             } catch (error) {
                 console.error("Error creating user:", error);
             }

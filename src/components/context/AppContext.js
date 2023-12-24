@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import img from "../../assets/img";
 import axios from "axios";
 
@@ -242,6 +242,27 @@ export const Contexts = ({ children }) => {
         },
     ]);
 
+    const [textLessons, setTextLessons] = useState([
+        {
+            title: "Đang cập nhật...",
+            img: "",
+            length: "",
+            to: "",
+        },
+        {
+            title: "Đang cập nhật...",
+            img: "",
+            length: "",
+            to: "",
+        },
+        {
+            title: "Đang cập nhật...",
+            img: "",
+            length: "",
+            to: "",
+        },
+    ]);
+
     const [listGhiChu, setListGhiChu] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -269,6 +290,27 @@ export const Contexts = ({ children }) => {
         setSelecTitle(title);
     };
 
+    const [togleGhiChu, setTogleGhiChu] = useState(false);
+    const filterRef = useRef(null);
+    const handleClickOutside = (e) => {
+        if (filterRef.current && !filterRef.current.contains(e.target)) {
+            setTogleGhiChu(false);
+        }
+    };
+    useEffect(() => {
+        const handleKeyPress = (e) => {
+            if (e.key === "Escape") {
+                setTogleGhiChu(false);
+            }
+        };
+        document.addEventListener("keydown", handleKeyPress);
+        document.addEventListener("click", handleClickOutside);
+        return () => {
+            document.removeEventListener("keydown", handleKeyPress);
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);
+
     return (
         <AppContext.Provider
             value={{
@@ -279,6 +321,7 @@ export const Contexts = ({ children }) => {
                 dauMatCo,
                 longNguc,
                 thanKinhTrungUong,
+                textLessons,
                 listGhiChu,
                 setListGhiChu,
                 selectedVideo,
@@ -292,6 +335,9 @@ export const Contexts = ({ children }) => {
                 setGhiChu,
                 chitiet,
                 setChiTiet,
+                togleGhiChu,
+                setTogleGhiChu,
+                filterRef,
             }}
         >
             {children}

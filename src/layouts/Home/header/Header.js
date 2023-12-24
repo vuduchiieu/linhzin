@@ -4,31 +4,13 @@ import { Link } from "react-router-dom";
 import img from "../../../assets/img";
 import Search from "./Search/Search";
 import icon from "../../../assets/icon";
-import { useEffect, useRef, useState } from "react";
 import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
+import { useContext } from "react";
+import { AppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 function Header() {
-    const [togleGhiChu, setTogleGhiChu] = useState(false);
-    const filterRef = useRef(null);
-    const handleClickOutside = (e) => {
-        if (filterRef.current && !filterRef.current.contains(e.target)) {
-            setTogleGhiChu(false);
-        }
-    };
-    useEffect(() => {
-        const handleKeyPress = (e) => {
-            if (e.key === "Escape") {
-                setTogleGhiChu(false);
-            }
-        };
-        document.addEventListener("keydown", handleKeyPress);
-        document.addEventListener("click", handleClickOutside);
-        return () => {
-            document.removeEventListener("keydown", handleKeyPress);
-            document.removeEventListener("click", handleClickOutside);
-        };
-    }, []);
+    const { togleGhiChu, setTogleGhiChu, filterRef } = useContext(AppContext);
     return (
         <div className={cx("wrap")}>
             <div className={cx("header")}>
@@ -44,7 +26,6 @@ function Header() {
                             setTogleGhiChu(!togleGhiChu);
                         }}
                         src={icon.document}
-                        alt=""
                     />
                     {togleGhiChu && (
                         <div className={cx("popper")}>
