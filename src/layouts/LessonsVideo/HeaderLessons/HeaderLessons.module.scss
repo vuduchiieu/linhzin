@@ -36,6 +36,8 @@
         position: relative;
         flex-grow: 0.25;
         img {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
             cursor: pointer;
         }
         .popper {

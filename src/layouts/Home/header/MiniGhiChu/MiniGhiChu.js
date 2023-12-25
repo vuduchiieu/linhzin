@@ -19,9 +19,21 @@ function MiniGhiChu({ setTogleGhiChu }) {
     return (
         <div className={cx("mini-document")}>
             <div className={cx("header")}>
-                <Link to={"/ghichu"}>
-                    <h3>Ghi chú</h3>
-                </Link>
+                <div className={cx("warp-header")}>
+                    <Link to={"/ghichu"}>
+                        <h3>Ghi chú</h3>
+                    </Link>
+                    <Link
+                        to={"/ghichu"}
+                        onClick={() => {
+                            setGhiChu([]);
+                            setChiTiet(true);
+                        }}
+                        className={cx("ghi-chu-moi")}
+                    >
+                        <img src={icon.add} />
+                    </Link>
+                </div>
                 <img
                     onClick={() => {
                         setTogleGhiChu(false);

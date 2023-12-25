@@ -5,7 +5,6 @@
     p {
         color: #fff;
     }
-
     .main {
         .content {
             .video {
@@ -116,10 +115,11 @@
             flex-direction: column;
             .content {
                 .video {
+                    height: 40vh;
                     flex-direction: column;
-                    height: 50vh;
                     iframe {
                         width: 100%;
+                        height: 85%;
                     }
                 }
                 .title {
@@ -137,7 +137,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 90vw;
-                height: 25vh;
+                height: 20vh;
                 overflow-x: auto;
             }
         }

@@ -10,14 +10,8 @@ import axios from "axios";
 const cx = classNames.bind(styles);
 
 function GhiChu() {
-    const {
-        listGhiChu,
-        setListGhiChu,
-        ghichu,
-        setGhiChu,
-        chitiet,
-        setChiTiet,
-    } = useContext(AppContext);
+    const { listGhiChu, ghichu, setGhiChu, chitiet, setChiTiet } =
+        useContext(AppContext);
 
     const handleChiTiet = (i) => {
         setGhiChu(listGhiChu[i]);
@@ -30,9 +24,6 @@ function GhiChu() {
                 await axios.delete(
                     `https://be-linhzin.vercel.app/api/v1/delete/${i}`
                 );
-                const newListGhiChu = [...listGhiChu];
-                newListGhiChu.splice(i, 1);
-                setListGhiChu(newListGhiChu);
                 window.location.href = "/ghichu";
             } catch (error) {
                 console.error("Error creating user:", error);
@@ -55,12 +46,7 @@ function GhiChu() {
                                 }}
                                 className={cx("ghi-chu-moi")}
                             >
-                                <button
-                                    onClick={() => {
-                                        setGhiChu([]);
-                                        setChiTiet(true);
-                                    }}
-                                >
+                                <button>
                                     <img src={icon.add} />
                                 </button>
                                 <p>Ghi chú mới</p>
