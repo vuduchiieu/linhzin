@@ -1,5 +1,5 @@
 .lessons {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     background-color: #292e39;
     h3,
     p {
@@ -109,6 +109,7 @@
 }
 @media (min-width: 0px) and (max-width: 739px) {
     .lessons {
+        height: 90vh;
         .main {
             display: flex;
             flex-direction: column;
