@@ -50,7 +50,7 @@ function LessonsVideo() {
     }
     return (
         <div style={{ minHeight: "100vh" }}>
-            <HeaderLessons title={title} />
+            <HeaderLessons title={title} setOnOff={setOnOff} />
             <ListVideo
                 lessonsData={lessonsData}
                 onOff={onOff}

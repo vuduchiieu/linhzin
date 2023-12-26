@@ -8,7 +8,7 @@ import img from "../../../assets/img";
 import MiniGhiChu from "../../Home/header/MiniGhiChu/MiniGhiChu";
 const cx = classNames.bind(styles);
 
-function HeaderLessons({ title }) {
+function HeaderLessons({ title, setOnOff }) {
     const {
         setSelectedVideo,
         setSelecTitle,
@@ -34,6 +34,7 @@ function HeaderLessons({ title }) {
                 <img
                     onClick={() => {
                         setTogleGhiChu(!togleGhiChu);
+                        setOnOff(false);
                     }}
                     src={icon.documentLesson}
                 />
