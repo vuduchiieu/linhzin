@@ -1,0 +1,48 @@
+.footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+    position: -webkit-fixed;
+    position: -ms-fixed;
+    position: -o-fixed;
+    position: -moz-fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    padding: 10px 0 0 10px;
+    z-index: 999;
+    background-color: #171c28;
+    p,
+    h3 {
+        color: #fff;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        p {
+            width: 145px;
+            height: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+        img {
+            width: 24px;
+            height: 24px;
+        }
+        :hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 739px) {
+    .footer {
+        justify-content: start;
+    }
+}

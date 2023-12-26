@@ -2,8 +2,9 @@ import { useParams } from "react-router-dom";
 import ListVideo from "./ListVideo/ListVideo";
 import HeaderLessons from "./HeaderLessons/HeaderLessons";
 import NotFound from "../../components/NotFound/NotFound";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../components/context/AppContext";
+import FooterLessons from "./FooterLessons/FooterLessons";
 
 function LessonsVideo() {
     const {
@@ -14,6 +15,7 @@ function LessonsVideo() {
         longNguc,
         thanKinhTrungUong,
     } = useContext(AppContext);
+    const [onOff, setOnOff] = useState(true);
     const { lessonsId } = useParams();
     const title =
         (lessonsId === "chauHong" && "Chậu hông") ||
@@ -47,10 +49,15 @@ function LessonsVideo() {
         );
     }
     return (
-        <>
+        <div style={{ height: "100vh" }}>
             <HeaderLessons title={title} />
-            <ListVideo lessonsData={lessonsData} />
-        </>
+            <ListVideo
+                lessonsData={lessonsData}
+                onOff={onOff}
+                setOnOff={setOnOff}
+            />
+            <FooterLessons onOff={onOff} setOnOff={setOnOff} />
+        </div>
     );
 }
 
