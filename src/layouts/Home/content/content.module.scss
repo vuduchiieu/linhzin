@@ -41,6 +41,7 @@
                 @keyframes moveOto {
                     0% {
                         transform: translateX(180%);
+                        -webkit-transform: translateX(180%);
                         opacity: 0;
                     }
                     50% {
@@ -48,6 +49,7 @@
                     }
                     100% {
                         transform: translateX(-420%);
+                        -webkit-transform: translateX(-420%);
                         opacity: 0;
                     }
                 }
