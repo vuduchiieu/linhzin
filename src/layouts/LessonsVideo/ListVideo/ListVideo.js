@@ -57,6 +57,7 @@ function ListVideo({ lessonsData, onOff, setOnOff }) {
                     <div className={cx("video")}>
                         {selectedVideo && (
                             <iframe
+                                allowFullScreen
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 src={selectedVideo}
                             ></iframe>
