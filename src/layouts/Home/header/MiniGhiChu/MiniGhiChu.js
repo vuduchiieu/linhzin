@@ -1,15 +1,14 @@
 import classNames from "classnames/bind";
 import styles from "./miniGhiChu.module.scss";
 import icon from "../../../../assets/icon";
-import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AppContext } from "../../../../components/context/AppContext";
+import { useAppContext } from "../../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 
 function MiniGhiChu({ setTogleGhiChu }) {
     const navigate = useNavigate();
-    const { listGhiChu, setChiTiet, setGhiChu } = useContext(AppContext);
+    const { listGhiChu, setChiTiet, setGhiChu } = useAppContext();
     const handleChiTiet = (i) => {
         setGhiChu(listGhiChu[i]);
         setChiTiet(true);

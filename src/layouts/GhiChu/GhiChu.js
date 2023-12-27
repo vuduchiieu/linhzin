@@ -1,8 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./ghichu.module.scss";
 import Header from "../Home/header/Header";
-import { useContext, useState } from "react";
-import { AppContext } from "../../components/context/AppContext";
+import { useAppContext } from "../../components/context/AppContext";
 import ChiTiet from "./ChiTiet/ChiTiet";
 import icon from "../../assets/icon";
 import axios from "axios";
@@ -10,8 +9,14 @@ import axios from "axios";
 const cx = classNames.bind(styles);
 
 function GhiChu() {
-    const { listGhiChu, ghichu, setGhiChu, chitiet, setChiTiet } =
-        useContext(AppContext);
+    const {
+        listGhiChu,
+        ghichu,
+        setGhiChu,
+        chitiet,
+        setChiTiet,
+        setRefreshData,
+    } = useAppContext();
 
     const handleChiTiet = (i) => {
         setGhiChu(listGhiChu[i]);
@@ -24,7 +29,7 @@ function GhiChu() {
                 await axios.delete(
                     `https://be-linhzin.vercel.app/api/v1/delete/${i}`
                 );
-                window.location.href = "/ghichu";
+                setRefreshData(true);
             } catch (error) {
                 console.error("Error creating user:", error);
             }

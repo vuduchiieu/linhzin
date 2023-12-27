@@ -5,12 +5,11 @@ import img from "../../../assets/img";
 import Search from "./Search/Search";
 import icon from "../../../assets/icon";
 import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
-import { useContext } from "react";
-import { AppContext } from "../../../components/context/AppContext";
+import { useAppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 function Header() {
-    const { togleGhiChu, setTogleGhiChu, filterRef } = useContext(AppContext);
+    const { togleGhiChu, setTogleGhiChu, filterRef } = useAppContext();
     return (
         <div className={cx("wrap")}>
             <div className={cx("header")}>

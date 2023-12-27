@@ -263,6 +263,7 @@ export const Contexts = ({ children }) => {
         },
     ]);
 
+    const [refreshData, setRefreshData] = useState(true);
     const [listGhiChu, setListGhiChu] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -273,10 +274,14 @@ export const Contexts = ({ children }) => {
                 setListGhiChu(response.data.data);
             } catch (error) {
                 console.error("Error fetching existing users:", error);
+            } finally {
+                setRefreshData(false);
             }
         };
-        fetchData();
-    }, []);
+        if (refreshData) {
+            fetchData();
+        }
+    }, [refreshData]);
 
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [selecTitle, setSelecTitle] = useState(null);
@@ -322,6 +327,7 @@ export const Contexts = ({ children }) => {
                 longNguc,
                 thanKinhTrungUong,
                 textLessons,
+                setRefreshData,
                 listGhiChu,
                 setListGhiChu,
                 selectedVideo,

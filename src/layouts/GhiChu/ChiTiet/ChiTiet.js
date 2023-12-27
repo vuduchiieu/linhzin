@@ -3,10 +3,12 @@ import styles from "./chitiet.module.scss";
 import icon from "../../../assets/icon";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useAppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 
 function ChiTiet({ setChiTiet, ghichu }) {
+    const { setRefreshData } = useAppContext();
     const [newGhiChu, setNewGhiChu] = useState({
         id: ghichu.id,
         title: ghichu.title,
@@ -23,7 +25,8 @@ function ChiTiet({ setChiTiet, ghichu }) {
                     title: "",
                     desc: "",
                 });
-                window.location.href = "/ghichu";
+                setRefreshData(true);
+                setChiTiet(false);
             } catch (error) {
                 console.error("Error creating user:", error);
             }
@@ -33,7 +36,8 @@ function ChiTiet({ setChiTiet, ghichu }) {
                     "https://be-linhzin.vercel.app/api/v1/update",
                     newGhiChu
                 );
-                window.location.href = "/ghichu";
+                setRefreshData(true);
+                setChiTiet(false);
             } catch (error) {
                 console.error("Error creating user:", error);
             }

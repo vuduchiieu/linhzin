@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import ListVideo from "./ListVideo/ListVideo";
 import HeaderLessons from "./HeaderLessons/HeaderLessons";
 import NotFound from "../../components/NotFound/NotFound";
-import { useContext, useState } from "react";
-import { AppContext } from "../../components/context/AppContext";
+import { useState } from "react";
+import { useAppContext } from "../../components/context/AppContext";
 import FooterLessons from "./FooterLessons/FooterLessons";
 
 function LessonsVideo() {
@@ -14,7 +14,7 @@ function LessonsVideo() {
         dauMatCo,
         longNguc,
         thanKinhTrungUong,
-    } = useContext(AppContext);
+    } = useAppContext();
     const [onOff, setOnOff] = useState(true);
     const { lessonsId } = useParams();
     const title =
