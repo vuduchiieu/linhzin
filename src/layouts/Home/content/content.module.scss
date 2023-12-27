@@ -38,6 +38,7 @@
                 align-self: flex-end;
                 height: 30%;
                 animation: moveOto 5s ease-in-out infinite;
+                -webkit-animation: moveOto 5s ease-in-out infinite;
                 @keyframes moveOto {
                     0% {
                         transform: translateX(180%);
