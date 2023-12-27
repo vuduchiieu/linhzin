@@ -37,20 +37,20 @@
             img:nth-child(2) {
                 align-self: flex-end;
                 height: 30%;
-                animation: moveOto 5s ease-in-out infinite;
                 -webkit-animation: moveOto 5s ease-in-out infinite;
+                animation: moveOto 5s ease-in-out infinite;
                 @keyframes moveOto {
                     0% {
-                        transform: translateX(180%);
                         -webkit-transform: translateX(180%);
+                        transform: translateX(180%);
                         opacity: 0;
                     }
                     50% {
                         opacity: 1;
                     }
                     100% {
-                        transform: translateX(-420%);
                         -webkit-transform: translateX(-420%);
+                        transform: translateX(-420%);
                         opacity: 0;
                     }
                 }
