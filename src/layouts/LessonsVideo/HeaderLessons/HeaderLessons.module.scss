@@ -2,7 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    position: -webkit-fixed;
+    position: -ms-fixed;
+    position: -o-fixed;
+    position: -moz-fixed;
     top: 0;
     background-color: #171c28;
     width: 100vw;

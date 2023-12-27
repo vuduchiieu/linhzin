@@ -1,11 +1,12 @@
 .lessons {
-    height: 95vh;
+    min-height: 100vh;
     background-color: #292e39;
     h3,
     p {
         color: #fff;
     }
     .main {
+        padding-top: 5vh;
         .content {
             .video {
                 display: flex;
