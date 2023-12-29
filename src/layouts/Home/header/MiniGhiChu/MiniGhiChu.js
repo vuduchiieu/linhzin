@@ -27,9 +27,9 @@ function MiniGhiChu({ setTogleGhiChu }) {
         <div className={cx("mini-document")}>
             <div className={cx("header")}>
                 <div className={cx("warp-header")}>
-                    <Link to={"/ghichu"}>
+                    <div>
                         <h3>Ghi chú</h3>
-                    </Link>
+                    </div>
                     <div
                         onClick={handleChiTietMiniGhiChu}
                         className={cx("ghi-chu-moi")}
