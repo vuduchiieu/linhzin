@@ -1,0 +1,45 @@
+.chi-tiet {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 8px 0;
+        .back,
+        .save {
+            img {
+                width: 16px;
+                height: 16px;
+            }
+            cursor: pointer;
+        }
+    }
+
+    .ghichu {
+        height: 90%;
+        .title {
+            position: relative;
+            textarea {
+                width: 100%;
+                padding: 0 10px;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 18px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                background-color: #eee;
+                height: 1px;
+                width: 100%;
+            }
+        }
+        .desc {
+            textarea {
+                border-radius: 10px;
+                width: 100%;
+                padding: 10px 10px 150px;
+            }
+        }
+    }
+}
