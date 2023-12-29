@@ -1,9 +1,10 @@
 .chi-tiet {
+    height: 291px;
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 16px 8px 0;
+        margin: 10px 8px 0;
         .back,
         .save {
             img {
@@ -21,7 +22,6 @@
             textarea {
                 width: 100%;
                 padding: 0 10px;
-                border-radius: 10px;
                 font-weight: 700;
                 font-size: 18px;
             }
@@ -36,9 +36,8 @@
         }
         .desc {
             textarea {
-                border-radius: 10px;
                 width: 100%;
-                padding: 10px 10px 159px;
+                padding: 10px 10px 170px;
             }
         }
     }
