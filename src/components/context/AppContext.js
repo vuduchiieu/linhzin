@@ -316,6 +316,8 @@ export const Contexts = ({ children }) => {
         };
     }, []);
 
+    const [isLoading, setIsLoading] = useState(false);
+
     return (
         <AppContext.Provider
             value={{
@@ -344,6 +346,8 @@ export const Contexts = ({ children }) => {
                 togleGhiChu,
                 setTogleGhiChu,
                 filterRef,
+                isLoading,
+                setIsLoading,
             }}
         >
             {children}

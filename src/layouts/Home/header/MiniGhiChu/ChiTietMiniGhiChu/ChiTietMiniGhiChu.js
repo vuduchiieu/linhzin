@@ -4,11 +4,12 @@ import icon from "../../../../../assets/icon";
 import { useAppContext } from "../../../../../components/context/AppContext";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import img from "../../../../../assets/img";
 
 const cx = classNames.bind(styles);
 
 function ChiTietMiniGhiChu({ setChiTietMiniGhiChu }) {
-    const { setRefreshData } = useAppContext();
+    const { setRefreshData, isLoading, setIsLoading } = useAppContext();
     const [newGhiChu, setNewGhiChu] = useState({
         id: "",
         title: "",
@@ -16,6 +17,7 @@ function ChiTietMiniGhiChu({ setChiTietMiniGhiChu }) {
     });
     const handleSave = async () => {
         try {
+            setIsLoading(true);
             await axios.post(
                 "https://be-linhzin.vercel.app/api/v1/create",
                 newGhiChu
@@ -28,6 +30,8 @@ function ChiTietMiniGhiChu({ setChiTietMiniGhiChu }) {
             setRefreshData(true);
         } catch (error) {
             console.error("Error creating user:", error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -45,7 +49,11 @@ function ChiTietMiniGhiChu({ setChiTietMiniGhiChu }) {
             <div className={cx("header")}>
                 <div className={cx("back")}></div>
                 <div onClick={handleSave} className={cx("save")}>
-                    <img src={icon.save} />
+                    {isLoading ? (
+                        <img src={img.loading} />
+                    ) : (
+                        <img src={icon.save} />
+                    )}
                 </div>
             </div>
 

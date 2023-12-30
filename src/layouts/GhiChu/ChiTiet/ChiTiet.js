@@ -4,11 +4,12 @@ import icon from "../../../assets/icon";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAppContext } from "../../../components/context/AppContext";
+import img from "../../../assets/img";
 
 const cx = classNames.bind(styles);
 
 function ChiTiet({ setChiTiet, ghichu }) {
-    const { setRefreshData } = useAppContext();
+    const { setRefreshData, isLoading, setIsLoading } = useAppContext();
     const [newGhiChu, setNewGhiChu] = useState({
         id: ghichu.id,
         title: ghichu.title,
@@ -17,6 +18,7 @@ function ChiTiet({ setChiTiet, ghichu }) {
     const handleSave = async () => {
         if (ghichu.id === undefined) {
             try {
+                setIsLoading(true);
                 await axios.post(
                     "https://be-linhzin.vercel.app/api/v1/create",
                     newGhiChu
@@ -29,8 +31,11 @@ function ChiTiet({ setChiTiet, ghichu }) {
                 setChiTiet(false);
             } catch (error) {
                 console.error("Error creating user:", error);
+            } finally {
+                setIsLoading(false);
             }
         } else if (ghichu.id !== undefined) {
+            setIsLoading(true);
             try {
                 await axios.put(
                     "https://be-linhzin.vercel.app/api/v1/update",
@@ -40,6 +45,8 @@ function ChiTiet({ setChiTiet, ghichu }) {
                 setChiTiet(false);
             } catch (error) {
                 console.error("Error creating user:", error);
+            } finally {
+                setIsLoading(false);
             }
         }
     };
@@ -65,7 +72,11 @@ function ChiTiet({ setChiTiet, ghichu }) {
                     <img src={icon.back} />
                 </div>
                 <div className={cx("save")} onClick={handleSave}>
-                    <img src={icon.save} />
+                    {isLoading ? (
+                        <img src={img.loading} />
+                    ) : (
+                        <img src={icon.save} />
+                    )}
                 </div>
             </div>
 

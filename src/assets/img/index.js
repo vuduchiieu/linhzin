@@ -10,6 +10,7 @@ const img = {
     longNguc: require("./long-nguc.jpg"),
     tktw: require("./tktw.jpg"),
     notFound: require("./NotFound.gif"),
+    loading: require("./loading.gif"),
 };
 
 export default img;
