@@ -35,8 +35,8 @@ function ChiTiet({ setChiTiet, ghichu }) {
                 setIsLoading(false);
             }
         } else if (ghichu.id !== undefined) {
-            setIsLoading(true);
             try {
+                setIsLoading(true);
                 await axios.put(
                     "https://be-linhzin.vercel.app/api/v1/update",
                     newGhiChu

@@ -14,7 +14,7 @@ function Header() {
         <div className={cx("wrap")}>
             <div className={cx("header")}>
                 <Link to={"/"} className={cx("logo")}>
-                    <h1>category</h1>
+                    <h1>linhzin</h1>
                 </Link>
                 <div className={cx("search")}>
                     <Search />
