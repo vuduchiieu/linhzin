@@ -8,6 +8,7 @@
     left: 0;
     height: 5vh;
     width: 100vw;
+
     z-index: 10;
     background-color: #171c28;
     p,
@@ -17,6 +18,7 @@
     .wrapper {
         display: flex;
         align-items: center;
+        margin: 0 30px;
         p {
             width: 145px;
             height: 100%;
