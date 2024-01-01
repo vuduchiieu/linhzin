@@ -16,6 +16,7 @@ function GhiChu() {
         chitiet,
         setChiTiet,
         setRefreshData,
+        isDarkMode,
     } = useAppContext();
 
     const handleChiTiet = (i) => {

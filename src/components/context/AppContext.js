@@ -318,6 +318,8 @@ const Contexts = ({ children }) => {
 
     const [isLoading, setIsLoading] = useState(false);
 
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
     return (
         <AppContext.Provider
             value={{
@@ -348,6 +350,8 @@ const Contexts = ({ children }) => {
                 filterRef,
                 isLoading,
                 setIsLoading,
+                isDarkMode,
+                setIsDarkMode,
             }}
         >
             {children}

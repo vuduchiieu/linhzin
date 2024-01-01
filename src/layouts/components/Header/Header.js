@@ -6,12 +6,17 @@ import Search from "./Search/Search";
 import icon from "../../../assets/icon";
 import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
 import { useAppContext } from "../../../components/context/AppContext";
-import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function Header() {
-    const { togleGhiChu, setTogleGhiChu, filterRef } = useAppContext();
-    const [toggleTheme, setToggleTheme] = useState(false);
+    const {
+        togleGhiChu,
+        setTogleGhiChu,
+        filterRef,
+        isDarkMode,
+        setIsDarkMode,
+    } = useAppContext();
+
     return (
         <header className={cx("wrap")}>
             <div className={cx("header")}>
@@ -24,10 +29,10 @@ function Header() {
                 </div>
                 <div className={cx("action")}>
                     <div
-                        onClick={() => setToggleTheme(!toggleTheme)}
+                        onClick={() => setIsDarkMode(!isDarkMode)}
                         className={cx("theme")}
                     >
-                        {toggleTheme === true ? (
+                        {isDarkMode === true ? (
                             <img src={icon.light} />
                         ) : (
                             <img src={icon.dark} />

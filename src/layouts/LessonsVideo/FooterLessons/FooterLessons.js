@@ -1,6 +1,5 @@
 import classNames from "classnames/bind";
 import styles from "./footerLessons.module.scss";
-import { useState } from "react";
 import { useAppContext } from "../../../components/context/AppContext";
 const cx = classNames.bind(styles);
 

@@ -8,9 +8,8 @@
     left: 0;
     height: 5vh;
     width: 100vw;
-
     z-index: 10;
-    background-color: #eee;
+    background-color: var(--backgoud-header-footer);
     .wrapper {
         display: flex;
         align-items: center;

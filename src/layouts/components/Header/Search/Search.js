@@ -21,6 +21,7 @@ function Search() {
         dauMatCo,
         longNguc,
         thanKinhTrungUong,
+        isDarkMode,
     } = useAppContext();
     useEffect(() => {
         if (!searchValue) {
@@ -46,7 +47,13 @@ function Search() {
             placement="bottom-end"
             visible={showResult}
             render={(attrs) => (
-                <div tabIndex="-1" {...attrs} className={cx("seach-result")}>
+                <div
+                    tabIndex="-1"
+                    {...attrs}
+                    className={cx("seach-result", {
+                        dark: isDarkMode,
+                    })}
+                >
                     {result.map((item, i) => (
                         <div key={i} className={cx("result")}>
                             <Link

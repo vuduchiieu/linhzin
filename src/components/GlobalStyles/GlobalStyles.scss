@@ -6,7 +6,28 @@
 }
 :root {
     --primari-color: #f5cca0;
+    --backgoud-header-footer: #eee;
+    --backgoud-primary: #fff;
+    --backgoud-main: #f6f6f6;
     --text-color: #1a162e;
+    --banner-color: linear-gradient(100deg, #f5cca0 0%, #e48f45 40%);
+    --filter-color: brightness(0) saturate(100%) invert(9%) sepia(11%)
+        saturate(3056%) hue-rotate(210deg) brightness(88%) contrast(97%);
+}
+
+.dark {
+    --primari-color: #292e39;
+    --backgoud-header-footer: #171c28;
+    --backgoud-primary: #1a162e;
+    --backgoud-main: #292e39;
+    --text-color: #fff;
+    --banner-color: radial-gradient(
+        circle farthest-corner at 32.7% 82.7%,
+        rgba(173, 0, 171, 1) 8.3%,
+        rgba(15, 51, 92, 1) 79.4%
+    );
+    --filter-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7485%) hue-rotate(52deg) brightness(108%) contrast(101%);
 }
 
 body {
@@ -23,6 +44,7 @@ h1,
 h2,
 h3 {
     font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
 }
 
 html *::-webkit-scrollbar {
@@ -43,6 +65,8 @@ textarea {
     font-family: "Tinos", serif;
     resize: none;
     overflow: hidden;
+    background-color: var(--backgoud-primary);
+    color: var(--text-color);
 }
 
 button,

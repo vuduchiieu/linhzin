@@ -1,7 +1,6 @@
 .mini-document {
     padding: 10px;
     z-index: 10;
-
     .header {
         display: flex;
         position: relative;
@@ -10,6 +9,7 @@
         margin-bottom: 5px;
         .warp-header {
             display: flex;
+
             .ghi-chu-moi {
                 margin-left: 10px;
                 margin-top: 5px;
@@ -33,7 +33,7 @@
             left: 0;
             height: 1px;
             width: 100%;
-            background-color: var(--primari-color);
+            background-color: #f5cca0;
         }
     }
 

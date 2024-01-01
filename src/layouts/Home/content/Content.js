@@ -44,7 +44,6 @@ function Content() {
                                 key={i}
                                 className={cx("lessons")}
                                 style={{
-                                    backgroundColor: "#F6F6F6",
                                     cursor: "default",
                                     opacity: 1,
                                 }}
