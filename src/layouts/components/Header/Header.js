@@ -22,28 +22,30 @@ function Header() {
                 <div className={cx("search")}>
                     <Search />
                 </div>
-                <div
-                    onClick={() => setToggleTheme(!toggleTheme)}
-                    className={cx("theme")}
-                >
-                    {toggleTheme === true ? (
-                        <img src={icon.light} />
-                    ) : (
-                        <img src={icon.dark} />
-                    )}
-                </div>
-                <div className={cx("document")} ref={filterRef}>
-                    <img
-                        onClick={() => {
-                            setTogleGhiChu(!togleGhiChu);
-                        }}
-                        src={icon.document}
-                    />
-                    {togleGhiChu && (
-                        <div className={cx("popper")}>
-                            <MiniGhiChu setTogleGhiChu={setTogleGhiChu} />
-                        </div>
-                    )}
+                <div className={cx("action")}>
+                    <div
+                        onClick={() => setToggleTheme(!toggleTheme)}
+                        className={cx("theme")}
+                    >
+                        {toggleTheme === true ? (
+                            <img src={icon.light} />
+                        ) : (
+                            <img src={icon.dark} />
+                        )}
+                    </div>
+                    <div className={cx("document")} ref={filterRef}>
+                        <img
+                            onClick={() => {
+                                setTogleGhiChu(!togleGhiChu);
+                            }}
+                            src={icon.document}
+                        />
+                        {togleGhiChu && (
+                            <div className={cx("popper")}>
+                                <MiniGhiChu setTogleGhiChu={setTogleGhiChu} />
+                            </div>
+                        )}
+                    </div>
                 </div>
                 <div className={cx("profile")}>
                     <img src={img.avt} />
