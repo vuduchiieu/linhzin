@@ -23,7 +23,6 @@
 
     .ghichu {
         margin-top: 20px;
-        height: 90%;
         .title {
             position: relative;
             textarea {
@@ -47,7 +46,8 @@
             textarea {
                 border-radius: 10px;
                 width: 100%;
-                padding: 1vh 10px 50vh;
+                height: 50vh;
+                padding: 0 10px;
             }
         }
     }
