@@ -22,15 +22,13 @@
     }
 
     .ghichu {
-        height: 60vh;
+        height: 68vh;
         margin-top: 20px;
         .title {
-            height: 10%;
             position: relative;
             textarea {
                 width: 100%;
-                height: 100%;
-                padding: 0 10px;
+                padding: 1vh 10px;
                 border-radius: 10px;
                 font-weight: 700;
                 font-size: 18px;
@@ -46,11 +44,9 @@
         }
         .desc {
             margin-top: 10px;
-            height: 90%;
             textarea {
                 width: 100%;
-                height: 100%;
-                padding: 0 10px;
+                padding: 1vh 10px 50vh;
                 border-radius: 10px;
             }
         }
