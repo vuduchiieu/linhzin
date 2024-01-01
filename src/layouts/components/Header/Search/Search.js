@@ -1,11 +1,10 @@
 import Tippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
 import styles from "./search.module.scss";
-import icon from "../../../../assets/icon";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-
 import { useAppContext } from "../../../../components/context/AppContext";
+import icon from "../../../../assets/icon";
 
 const cx = classNames.bind(styles);
 
@@ -72,7 +71,7 @@ function Search() {
             onClickOutside={() => setShowResult(!showResult)}
         >
             <div className={cx("seach")}>
-                <img src={icon.searchLesson} spellCheck={false} />
+                <img src={icon.seach} spellCheck={false} />
                 <input
                     spellCheck="false"
                     ref={inputRef}

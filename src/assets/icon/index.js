@@ -11,6 +11,8 @@ const icon = {
     edit: require("./Edit Square.svg").default,
     save: require("./Tick Square.svg").default,
     add: require("./Plus.svg").default,
+    dark: require("./icon-dark.svg").default,
+    light: require("./icon-light.svg").default,
 };
 
 export default icon;

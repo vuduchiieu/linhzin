@@ -3,11 +3,8 @@
     max-height: min((100vh - 96px) - 60px, 434px);
     width: 420px;
     border-radius: 20px;
-    background-color: #292e39;
-    box-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
-    h3 {
-        color: #fff;
-    }
+    background-color: #fff;
+    box-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
     .result {
         position: relative;
         margin: 10px;
@@ -30,8 +27,9 @@
 
         .info {
             h3 {
+                color: var(--text-color);
                 font-size: 18px;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 32px;
                 height: 100%;
             }
@@ -49,7 +47,7 @@
     width: 420px;
 
     &:focus-within {
-        background-color: #292e39;
+        background-color: #e0dfdf;
     }
     img {
         margin-left: 10px;
@@ -59,14 +57,11 @@
         width: 100%;
         caret-color: #444;
         background-color: transparent;
-        color: #fff;
+        color: #000;
         border: none;
         outline: none;
         padding: 0 4px;
         overflow: visible;
-        &::placeholder {
-            color: #fff;
-        }
     }
 }
 @media (min-width: 0px) and (max-width: 739px) {
@@ -98,6 +93,7 @@
                     text-overflow: ellipsis;
                     height: 100%;
                     white-space: nowrap;
+                    color: var(--text-color);
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 32px;

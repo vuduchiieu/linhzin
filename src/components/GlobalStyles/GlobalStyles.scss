@@ -18,6 +18,13 @@ body {
     overflow-x: hidden;
 }
 
+p,
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
 html *::-webkit-scrollbar {
     border-radius: 4px;
     height: 6px;

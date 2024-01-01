@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import ListVideo from "./ListVideo/ListVideo";
-import HeaderLessons from "./HeaderLessons/HeaderLessons";
 import NotFound from "../../components/NotFound/NotFound";
 import { useState } from "react";
 import { useAppContext } from "../../components/context/AppContext";
 import FooterLessons from "./FooterLessons/FooterLessons";
+import Header from "../components/Header/Header";
 
 function LessonsVideo() {
     const {
@@ -34,7 +34,7 @@ function LessonsVideo() {
     if (!lessonsData) {
         return (
             <>
-                <HeaderLessons />
+                <Header />
                 <div
                     style={{
                         display: "flex",
@@ -50,7 +50,7 @@ function LessonsVideo() {
     }
     return (
         <>
-            <HeaderLessons title={title} setOnOff={setOnOff} />
+            <Header />
             <ListVideo
                 lessonsData={lessonsData}
                 onOff={onOff}

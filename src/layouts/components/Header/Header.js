@@ -6,18 +6,31 @@ import Search from "./Search/Search";
 import icon from "../../../assets/icon";
 import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
 import { useAppContext } from "../../../components/context/AppContext";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function Header() {
     const { togleGhiChu, setTogleGhiChu, filterRef } = useAppContext();
+    const [toggleTheme, setToggleTheme] = useState(false);
     return (
         <div className={cx("wrap")}>
             <div className={cx("header")}>
                 <Link to={"/"} className={cx("logo")}>
+                    <img src={img.logo} alt="" />
                     <h1>linhzin</h1>
                 </Link>
                 <div className={cx("search")}>
                     <Search />
+                </div>
+                <div
+                    onClick={() => setToggleTheme(!toggleTheme)}
+                    className={cx("theme")}
+                >
+                    {toggleTheme === true ? (
+                        <img src={icon.dark} />
+                    ) : (
+                        <img src={icon.light} />
+                    )}
                 </div>
                 <div className={cx("document")} ref={filterRef}>
                     <img

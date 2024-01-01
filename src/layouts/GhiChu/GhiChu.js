@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./ghichu.module.scss";
-import Header from "../Home/header/Header";
+import Header from "../components/Header/Header";
 import { useAppContext } from "../../components/context/AppContext";
 import ChiTiet from "./ChiTiet/ChiTiet";
 import icon from "../../assets/icon";

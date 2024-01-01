@@ -1,4 +1,5 @@
 const img = {
+    logo: require("./logo192.png"),
     avt: require("./avt.jpg"),
     banner: require("./Hình ảnh.png"),
     hospital: require("./hospital.png"),
