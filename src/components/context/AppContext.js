@@ -2,9 +2,9 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 import img from "../../assets/img";
 import axios from "axios";
 
-export const AppContext = createContext();
+const AppContext = createContext();
 
-export const Contexts = ({ children }) => {
+const Contexts = ({ children }) => {
     const [lessons, setLessons] = useState([
         {
             title: "Chậu hông",
@@ -355,6 +355,8 @@ export const Contexts = ({ children }) => {
     );
 };
 
-export const useAppContext = () => {
+const useAppContext = () => {
     return useContext(AppContext);
 };
+
+export { Contexts, useAppContext };

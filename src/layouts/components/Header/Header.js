@@ -13,7 +13,7 @@ function Header() {
     const { togleGhiChu, setTogleGhiChu, filterRef } = useAppContext();
     const [toggleTheme, setToggleTheme] = useState(false);
     return (
-        <div className={cx("wrap")}>
+        <header className={cx("wrap")}>
             <div className={cx("header")}>
                 <Link to={"/"} className={cx("logo")}>
                     <img src={img.logo} alt="" />
@@ -49,7 +49,7 @@ function Header() {
                     <img src={img.avt} />
                 </div>
             </div>
-        </div>
+        </header>
     );
 }
 
