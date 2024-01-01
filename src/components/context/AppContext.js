@@ -47,7 +47,7 @@ const Contexts = ({ children }) => {
     const [chauHong, setChauHong] = useState([
         {
             id: 0,
-            title: "1. Mạch máu thần kinh bụng, chậu hông",
+            title: "1. Thành bụng và chậu hông",
             src: "https://www.youtube.com/embed/6KomMohxEuU?si=LP33vJYKNlTxEihk",
             to: "/lessons/chauHong",
         },
@@ -59,7 +59,7 @@ const Contexts = ({ children }) => {
         },
         {
             id: 2,
-            title: "3. Thành bụng và chậu hông",
+            title: "3. Mạch máu thần kinh bụng, chậu hông",
             src: "https://www.youtube.com/embed/8kQdtXbkmkI?si=S1IUu3jrQfJdv6Az",
             to: "/lessons/chauHong",
         },

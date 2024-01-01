@@ -41,6 +41,17 @@ function ListVideo({ lessonsData, onOff, setOnOff }) {
             setActive(lessonsData[0].id);
         }
     }, [lessonsData]);
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => {
+        setIsMounted(true);
+        return () => {
+            if (isMounted) {
+                setSelectedVideo(null);
+                setSelecTitle(null);
+                setActive(null);
+            }
+        };
+    }, [isMounted]);
     useEffect(() => {
         if (activeButtonRef.current) {
             activeButtonRef.current.scrollIntoView({ behavior: "smooth" });
