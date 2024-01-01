@@ -27,9 +27,9 @@ function Header() {
                     className={cx("theme")}
                 >
                     {toggleTheme === true ? (
-                        <img src={icon.dark} />
-                    ) : (
                         <img src={icon.light} />
+                    ) : (
+                        <img src={icon.dark} />
                     )}
                 </div>
                 <div className={cx("document")} ref={filterRef}>
