@@ -8,7 +8,7 @@ function FooterLessons({ onOff, setOnOff }) {
     const { selecTitle } = useAppContext();
 
     return (
-        <div className={cx("footer")}>
+        <footer className={cx("footer")}>
             <div
                 onClick={() => {
                     setOnOff(!onOff);
@@ -22,7 +22,7 @@ function FooterLessons({ onOff, setOnOff }) {
                     <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNiAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuMTI1IDEuMDYyNUMwLjEyNSAwLjc4MTI1IDAuMzcxMDk0IDAuNSAwLjY4NzUgMC41SDE1LjMxMjVDMTUuNTkzOCAwLjUgMTUuODc1IDAuNzgxMjUgMTUuODc1IDEuMDYyNUMxNS44NzUgMS4zNzg5MSAxNS41OTM4IDEuNjI1IDE1LjMxMjUgMS42MjVIMC42ODc1QzAuMzcxMDk0IDEuNjI1IDAuMTI1IDEuMzc4OTEgMC4xMjUgMS4wNjI1Wk0wLjEyNSA2LjY4NzVDMC4xMjUgNi40MDYyNSAwLjM3MTA5NCA2LjEyNSAwLjY4NzUgNi4xMjVIMTUuMzEyNUMxNS41OTM4IDYuMTI1IDE1Ljg3NSA2LjQwNjI1IDE1Ljg3NSA2LjY4NzVDMTUuODc1IDcuMDAzOTEgMTUuNTkzOCA3LjI1IDE1LjMxMjUgNy4yNUgwLjY4NzVDMC4zNzEwOTQgNy4yNSAwLjEyNSA3LjAwMzkxIDAuMTI1IDYuNjg3NVpNMTUuMzEyNSAxMi44NzVIMC42ODc1QzAuMzcxMDk0IDEyLjg3NSAwLjEyNSAxMi42Mjg5IDAuMTI1IDEyLjMxMjVDMC4xMjUgMTIuMDMxMiAwLjM3MTA5NCAxMS43NSAwLjY4NzUgMTEuNzVIMTUuMzEyNUMxNS41OTM4IDExLjc1IDE1Ljg3NSAxMi4wMzEyIDE1Ljg3NSAxMi4zMTI1QzE1Ljg3NSAxMi42Mjg5IDE1LjU5MzggMTIuODc1IDE1LjMxMjUgMTIuODc1WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzY1Ml8xNzc1KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzY1Ml8xNzc1IiB4MT0iLTQiIHkxPSItNSIgeDI9Ii00IiB5Mj0iMTkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzVFQkJGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNBMTc0RkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K" />
                 )}
             </div>
-        </div>
+        </footer>
     );
 }
 

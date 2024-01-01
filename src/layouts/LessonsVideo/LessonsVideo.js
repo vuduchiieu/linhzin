@@ -17,13 +17,6 @@ function LessonsVideo() {
     } = useAppContext();
     const [onOff, setOnOff] = useState(true);
     const { lessonsId } = useParams();
-    const title =
-        (lessonsId === "chauHong" && "Chậu hông") ||
-        (lessonsId === "chiDuoi" && "Chi dưới") ||
-        (lessonsId === "chiTren" && "Chi trên") ||
-        (lessonsId === "dauMatCo" && "Đầu mặt cổ") ||
-        (lessonsId === "longNguc" && "Lồng ngực") ||
-        (lessonsId === "tktw" && "Thần kinh trung ương");
     const lessonsData =
         (lessonsId === "chauHong" && chauHong) ||
         (lessonsId === "chiDuoi" && chiDuoi) ||
@@ -41,9 +34,7 @@ function LessonsVideo() {
                         justifyContent: "center",
                     }}
                 >
-                    <div>
-                        <NotFound />
-                    </div>
+                    <NotFound />
                 </div>
             </>
         );

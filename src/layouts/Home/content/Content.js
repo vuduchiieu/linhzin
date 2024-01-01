@@ -10,7 +10,7 @@ function Content() {
     const { lessons, textLessons } = useAppContext();
 
     return (
-        <div className={cx("wrap")}>
+        <main className={cx("wrap")}>
             <div className={cx("content")}>
                 <div className={cx("banner")}>
                     <img src={img.banner} />
@@ -58,7 +58,7 @@ function Content() {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 
