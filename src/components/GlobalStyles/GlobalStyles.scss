@@ -41,6 +41,8 @@ html *::-webkit-scrollbar-track {
 
 textarea {
     font-family: "Tinos", serif;
+    resize: none;
+    overflow: hidden;
 }
 
 button,
@@ -51,7 +53,6 @@ textarea,
 [tabindex] {
     border: none;
     outline: none;
-    resize: none;
 }
 
 input[type="color"],
