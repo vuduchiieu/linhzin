@@ -321,12 +321,12 @@ const Contexts = ({ children }) => {
     const darkModeMediaQuery = window.matchMedia(
         "(prefers-color-scheme: dark)"
     );
-    const saveTheme = localStorage.getItem("isDarkMode");
+    const saveTheme = localStorage.getItem("theme");
     const initialTheme =
         saveTheme !== null ? JSON.parse(saveTheme) : darkModeMediaQuery.matches;
     const [isDarkMode, setIsDarkMode] = useState(initialTheme);
     useEffect(() => {
-        localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
+        localStorage.setItem("theme", JSON.stringify(isDarkMode));
     }, [isDarkMode]);
 
     return (
