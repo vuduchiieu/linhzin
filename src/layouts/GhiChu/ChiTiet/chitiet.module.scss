@@ -50,9 +50,12 @@
         }
         .desc {
             margin-top: 10px;
+            height: 60vh;
             textarea {
+                display: block;
                 width: 100%;
-                padding: 1vh 10px 50vh;
+                height: 100%;
+                padding: 4vh 10px 0;
                 border-radius: 10px;
             }
         }
