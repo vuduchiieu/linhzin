@@ -131,6 +131,16 @@
     }
 }
 
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrap {
+        .content {
+            .banner {
+                height: 30vh;
+            }
+        }
+    }
+}
+
 @media (min-width: 0px) and (max-width: 739px) {
     .wrap {
         .content {

@@ -67,6 +67,24 @@
         }
     }
 }
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .lessons {
+        .main {
+            .content {
+                .video {
+                    min-width: 75vw;
+                    height: 50vh;
+                }
+            }
+            .nav-bar {
+                width: 25vw;
+                height: 50vh;
+                overflow-x: auto;
+            }
+        }
+    }
+}
 @media (min-width: 0px) and (max-width: 739px) {
     .lessons {
         .main {
