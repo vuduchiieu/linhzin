@@ -318,20 +318,10 @@ const Contexts = ({ children }) => {
 
     const [isLoading, setIsLoading] = useState(false);
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    useEffect(() => {
-        const darkModeMediaQuery = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        );
-        const handleDarkModeChange = (e) => {
-            setIsDarkMode(e.matches);
-        };
-        handleDarkModeChange(darkModeMediaQuery);
-        darkModeMediaQuery.addListener(handleDarkModeChange);
-        return () => {
-            darkModeMediaQuery.removeListener(handleDarkModeChange);
-        };
-    }, []);
+    const darkModeMediaQuery = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    );
+    const [isDarkMode, setIsDarkMode] = useState(darkModeMediaQuery.matches);
 
     return (
         <AppContext.Provider
