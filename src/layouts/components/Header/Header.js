@@ -40,6 +40,7 @@ function Header() {
                     </div>
                     <div className={cx("document")} ref={filterRef}>
                         <img
+                            className={cx("icon-document")}
                             onClick={() => {
                                 setTogleGhiChu(!togleGhiChu);
                             }}

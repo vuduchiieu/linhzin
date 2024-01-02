@@ -1,6 +1,5 @@
 .chi-tiet {
     height: 291px;
-
     .header {
         display: flex;
         justify-content: space-between;
@@ -13,6 +12,11 @@
                 height: 16px;
             }
             cursor: pointer;
+        }
+        .save {
+            .save-icon {
+                filter: var(--filter-color);
+            }
         }
     }
 

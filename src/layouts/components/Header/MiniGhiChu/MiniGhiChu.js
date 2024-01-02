@@ -35,6 +35,7 @@ function MiniGhiChu({ setTogleGhiChu }) {
                         className={cx("ghi-chu-moi")}
                     >
                         <img
+                            className={cx("action")}
                             src={
                                 chiTietMiniGhiChu === true
                                     ? icon.back
@@ -44,6 +45,7 @@ function MiniGhiChu({ setTogleGhiChu }) {
                     </div>
                 </div>
                 <img
+                    className={cx("close-icon")}
                     onClick={() => {
                         setTogleGhiChu(false);
                     }}

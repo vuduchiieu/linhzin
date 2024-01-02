@@ -75,7 +75,7 @@ function ChiTiet({ setChiTiet, ghichu }) {
                     {isLoading ? (
                         <img src={img.loading} />
                     ) : (
-                        <img src={icon.save} />
+                        <img className={cx("save-icon")} src={icon.save} />
                     )}
                 </div>
             </div>
