@@ -88,6 +88,7 @@
 }
 @media (min-width: 0px) and (max-width: 739px) {
     .lessons {
+        max-width: 739px;
         .main {
             display: flex;
             flex-direction: column;
