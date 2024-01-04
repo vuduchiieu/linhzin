@@ -75,12 +75,12 @@
             .content {
                 .video {
                     min-width: 75vw;
-                    height: 50vh;
+                    min-height: 50vh;
                 }
             }
             .nav-bar {
                 width: 25vw;
-                height: 50vh;
+                min-height: 50vh;
                 overflow-x: auto;
             }
         }
@@ -121,7 +121,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 90vw;
-                height: 25vh;
+                max-height: 25vh;
                 overflow-x: auto;
             }
         }
