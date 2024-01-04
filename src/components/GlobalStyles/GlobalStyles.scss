@@ -4,14 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-@supports (padding: max(0px)) {
-    body,
-    header,
-    footer {
-        padding-left: min(0vmin, env(safe-area-inset-left));
-        padding-right: min(0vmin, env(safe-area-inset-right));
-    }
-}
+
 :root {
     --primari-color: #f5cca0;
     --backgoud-header-footer: #eee;
@@ -49,6 +42,10 @@ body {
     text-rendering: optimizeLegibility;
     overflow-y: overlay;
     overflow-x: hidden;
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right)
+        constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+        env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 p,
