@@ -1,5 +1,6 @@
 .lessons {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     background-color: var(--backgoud-main);
     .main {
         padding-top: 5vh;

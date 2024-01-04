@@ -3,6 +3,7 @@
     justify-content: center;
     background-color: var(--backgoud-main);
     padding-top: 30px;
+    min-width: 100%;
     @keyframes moveOto {
         0% {
             transform: translateX(180%);
@@ -74,7 +75,7 @@
         }
         .video-lessons,
         .text-lessons {
-            min-height: 445px;
+            min-height: 40vh;
             margin-top: 40px;
 
             h2 {
@@ -94,7 +95,7 @@
                 .lessons {
                     display: flex;
                     width: 413px;
-                    height: 156px;
+                    min-height: 15vh;
                     margin: 10px 0;
                     padding: 20px 26px 20px 20px;
                     border-radius: 16px;
@@ -153,7 +154,6 @@
             .video-lessons,
             .text-lessons {
                 margin-top: 20px;
-                height: 524px;
                 h2 {
                     font-size: 20px;
                     margin-bottom: 10px;
