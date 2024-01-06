@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0fd53c10.css",
+    "main.js": "/static/js/main.e84e8f26.js",
+    "static/js/651.56e80c5f.chunk.js": "/static/js/651.56e80c5f.chunk.js",
+    "static/media/NotFound.gif": "/static/media/NotFound.694315f98b3e02890fef.gif",
+    "static/media/Hình ảnh.png": "/static/media/Hình ảnh.77c651710a2ca4c1a5d1.png",
+    "static/media/chi-tren.jpg": "/static/media/chi-tren.dbdf5e8181165de21dcb.jpg",
+    "static/media/chi-duoi.jpg": "/static/media/chi-duoi.bb9bc9a169805625be7e.jpg",
+    "static/media/ambulance.png": "/static/media/ambulance.4c34a13559b1a155ad0c.png",
+    "static/media/tktw.jpg": "/static/media/tktw.9e0abad4ec1540f45ed2.jpg",
+    "static/media/long-nguc.jpg": "/static/media/long-nguc.0ab0f618fc6f2c2d53f1.jpg",
+    "static/media/loading.gif": "/static/media/loading.d7b1b3c1d01ef8dcc566.gif",
+    "static/media/hospital.png": "/static/media/hospital.fbfa3e581118c6dbedb9.png",
+    "static/media/chau-hong.jpg": "/static/media/chau-hong.697b9d06a363b4f99237.jpg",
+    "static/media/dau-mat-co.jpg": "/static/media/dau-mat-co.97e2ffcd7df55aa7de1f.jpg",
+    "static/media/logo192.png": "/static/media/logo192.ffa944cf801d4af5ed61.png",
+    "static/media/icon-light.svg": "/static/media/icon-light.4b722d46a3e7c717ec4a59f520c9e821.svg",
+    "static/media/icon-dark.svg": "/static/media/icon-dark.ea39185a126ef8571b692aafb694789a.svg",
+    "static/media/Edit Square.svg": "/static/media/Edit Square.be31f49eba179e72af1b14ba50588a34.svg",
+    "index.html": "/index.html",
+    "static/media/Delete.svg": "/static/media/Delete.bf837cdab9a53a625441b849a50d92a3.svg",
+    "static/media/Document.svg": "/static/media/Document.75e6ed6d57622def1ddf3b422ca54533.svg",
+    "static/media/documentLesson.svg": "/static/media/documentLesson.2be785d67d3036f164ed1461960da274.svg",
+    "static/media/Close Square.svg": "/static/media/Close Square.7cf8320d4707d3c99619a1bbbfa66a7b.svg",
+    "static/media/Plus.svg": "/static/media/Plus.4fa50728aff09b685cbb311f4d062ea6.svg",
+    "static/media/Tick Square.svg": "/static/media/Tick Square.3b54ef984eee0c1c42d17cfe65e26dd9.svg",
+    "static/media/Arrow - Left.svg": "/static/media/Arrow - Left.68af2abe81ffbcac3d89962bdb7a5fb1.svg",
+    "static/media/Arrow - Left lesson.svg": "/static/media/Arrow - Left lesson.de6b52fe222064b8fc95dcf727373458.svg",
+    "static/media/search.svg": "/static/media/search.a378252d96e458cde50ca20d52c37a8b.svg",
+    "static/media/searchLesson.svg": "/static/media/searchLesson.1fc2c6c14c9e744ec148cd6c71b33ff3.svg",
+    "static/media/arrow - top.svg": "/static/media/arrow - top.e34fba0329724a2e3a18496af3886821.svg",
+    "main.0fd53c10.css.map": "/static/css/main.0fd53c10.css.map",
+    "main.e84e8f26.js.map": "/static/js/main.e84e8f26.js.map",
+    "651.56e80c5f.chunk.js.map": "/static/js/651.56e80c5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fd53c10.css",
+    "static/js/main.e84e8f26.js"
+  ]
+}
