@@ -8,8 +8,8 @@ import json from "@rollup/plugin-json";
 export default {
     input: "src/index.js",
     output: {
-        dir: "dist/bundle.js",
-        format: "cjs",
+        dir: "public/bundle.js",
+        format: "es",
     },
     plugins: [
         nodeResolve({
