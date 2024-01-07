@@ -81,22 +81,30 @@ function ListVideo({ lessonsData, onOff, setOnOff }) {
                 </div>
                 {onOff && (
                     <div className={cx("nav-bar")}>
-                        {lessonsData.map((item) => (
-                            <button
-                                onClick={() =>
-                                    handleOpen(item.src, item.id, item.title)
-                                }
-                                key={item.id}
-                                className={cx("button", {
-                                    active: item.id === active,
-                                })}
-                                ref={
-                                    item.id === active ? activeButtonRef : null
-                                }
-                            >
-                                <p>{item.title}</p>
-                            </button>
-                        ))}
+                        <div className={cx("wrap")}>
+                            {lessonsData.map((item) => (
+                                <button
+                                    onClick={() =>
+                                        handleOpen(
+                                            item.src,
+                                            item.id,
+                                            item.title
+                                        )
+                                    }
+                                    key={item.id}
+                                    className={cx("button", {
+                                        active: item.id === active,
+                                    })}
+                                    ref={
+                                        item.id === active
+                                            ? activeButtonRef
+                                            : null
+                                    }
+                                >
+                                    <p>{item.title}</p>
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
