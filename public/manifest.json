@@ -1,6 +1,10 @@
 {
     "short_name": "linhzin",
     "name": "linhzin",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "start_url": "/index.html",
     "icons": [
         {
             "src": "favicon.ico",
@@ -17,9 +21,5 @@
             "sizes": "32x32",
             "type": "image/png"
         }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "theme_color": "#fff",
-    "background_color": "#fff"
+    ]
 }
