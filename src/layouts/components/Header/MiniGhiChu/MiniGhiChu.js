@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames/bind";
 import styles from "./miniGhiChu.module.scss";
 import { Link, useNavigate } from "react-router-dom";

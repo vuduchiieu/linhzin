@@ -6,6 +6,7 @@ import ChiTiet from "./ChiTiet/ChiTiet";
 import icon from "../../assets/icon";
 import axios from "axios";
 import { useEffect } from "react";
+import React from "react";
 
 const cx = classNames.bind(styles);
 

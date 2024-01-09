@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: ["@babel/polyfill", path.resolve(__dirname, "src/index.js")],
+    entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "index.js",
@@ -29,14 +29,10 @@ module.exports = {
                 use: ["svg-url-loader"],
             },
             {
-                test: /\.(jpg|jpeg|png|gif)$/i,
+                test: /\.(png|jpe?g|gif)$/i,
                 use: [
                     {
                         loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "images/",
-                        },
                     },
                 ],
             },

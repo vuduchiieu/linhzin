@@ -1,3 +1,4 @@
+import React from "react";
 import img from "../../assets/img";
 import classNames from "classnames/bind";
 import styles from "./notFound.module.scss";

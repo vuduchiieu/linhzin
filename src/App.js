@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 import classNames from "classnames/bind";
 import Home from "./layouts/Home/Home";
 import LessonsVideo from "./layouts/LessonsVideo/LessonsVideo";

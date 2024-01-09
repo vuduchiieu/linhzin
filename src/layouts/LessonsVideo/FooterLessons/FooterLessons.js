@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames/bind";
 import styles from "./footerLessons.module.scss";
 import { useAppContext } from "../../../components/context/AppContext";

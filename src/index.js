@@ -15,5 +15,4 @@ root.render(
         </Contexts>
     </React.StrictMode>
 );
-
 reportWebVitals();
