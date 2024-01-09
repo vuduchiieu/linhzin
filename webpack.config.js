@@ -7,7 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "index.js",
-        clean: true,
+        libraryTarget: "text/javascript",
     },
     module: {
         rules: [
