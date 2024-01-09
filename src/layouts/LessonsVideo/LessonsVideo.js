@@ -1,12 +1,18 @@
 import { useParams } from "react-router-dom";
 import ListVideo from "./ListVideo/ListVideo";
 import NotFound from "../../components/NotFound/NotFound";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppContext } from "../../components/context/AppContext";
 import FooterLessons from "./FooterLessons/FooterLessons";
 import Header from "../components/Header/Header";
 
 function LessonsVideo() {
+    useEffect(() => {
+        document.title = "Bài học video";
+        return () => {
+            document.title = "linhzin";
+        };
+    }, []);
     const {
         chauHong,
         chiDuoi,
@@ -39,6 +45,7 @@ function LessonsVideo() {
             </>
         );
     }
+
     return (
         <>
             <Header />

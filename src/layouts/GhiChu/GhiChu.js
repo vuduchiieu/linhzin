@@ -5,6 +5,7 @@ import { useAppContext } from "../../components/context/AppContext";
 import ChiTiet from "./ChiTiet/ChiTiet";
 import icon from "../../assets/icon";
 import axios from "axios";
+import { useEffect } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -16,8 +17,14 @@ function GhiChu() {
         chitiet,
         setChiTiet,
         setRefreshData,
-        isDarkMode,
     } = useAppContext();
+
+    useEffect(() => {
+        document.title = "Ghi chú";
+        return () => {
+            document.title = "linhzin";
+        };
+    }, []);
 
     const handleChiTiet = (i) => {
         setGhiChu(listGhiChu[i]);
@@ -36,6 +43,7 @@ function GhiChu() {
             }
         }
     };
+
     return (
         <div className={cx("ghichu")}>
             <Header />
