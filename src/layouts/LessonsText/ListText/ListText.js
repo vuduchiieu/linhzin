@@ -1,3 +1,5 @@
+import React from "react";
+
 function ListText({ lessonsData }) {
     return <h1>listtext</h1>;
 }

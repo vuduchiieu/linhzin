@@ -250,7 +250,7 @@ const Contexts = ({ children }) => {
         },
         {
             title: "Tai mũi họng",
-            to: "/text/tai mũi họng",
+            to: "/text/taimuihong",
         },
         {
             title: "Đang cập nhật....",
