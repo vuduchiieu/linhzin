@@ -258,9 +258,23 @@ const Contexts = ({ children }) => {
         },
     ]);
 
-    const [giaiPhauNguoi, setGiaiPhauNguoi] = useState([]);
+    const [giaiPhauNguoi, setGiaiPhauNguoi] = useState([
+        {
+            id: 0,
+            title: "Giải phẫu người",
+            src: "https://drive.google.com/file/d/1LdxcPgcJ50FSOPbEg61B6fH7mjzlYndV/preview",
+            to: "/text/giaiphaunguoi",
+        },
+    ]);
 
-    const [taiMuiHong, setTaiMuiHong] = useState([]);
+    const [taiMuiHong, setTaiMuiHong] = useState([
+        {
+            id: 0,
+            title: "Tai mũi họng",
+            src: "https://www.youtube.com/embed/84us9xLmn7M?si=Hiuctfqfy4HvZGmJ",
+            to: "/text/taimuihong",
+        },
+    ]);
 
     const [refreshData, setRefreshData] = useState(true);
     const [listGhiChu, setListGhiChu] = useState([]);
