@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
 
-import icon from "../../../../assets/icon";
+import icon from "../../../assets/icon";
 
 import styles from "./search.module.scss";
 
-import { useAppContext } from "../../../../components/context/AppContext";
+import { useAppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 

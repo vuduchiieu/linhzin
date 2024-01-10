@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import classNames from "classnames/bind";
 
-import Header from "../components/Header/Header";
+import Header from "../Header/Header";
 import ChiTiet from "./ChiTiet/ChiTiet";
 
 import icon from "../../assets/icon";

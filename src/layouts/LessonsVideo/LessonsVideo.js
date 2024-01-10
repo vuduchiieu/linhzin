@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import ListVideo from "./ListVideo/ListVideo";
 import NotFound from "../../components/NotFound/NotFound";
 import FooterLessons from "./FooterLessons/FooterLessons";
-import Header from "../components/Header/Header";
+import Header from "../Header/Header";
 
 import { useAppContext } from "../../components/context/AppContext";
 
