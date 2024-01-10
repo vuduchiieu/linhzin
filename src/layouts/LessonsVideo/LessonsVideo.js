@@ -1,11 +1,12 @@
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import React from "react";
+
 import ListVideo from "./ListVideo/ListVideo";
 import NotFound from "../../components/NotFound/NotFound";
-import { useEffect, useState } from "react";
-import { useAppContext } from "../../components/context/AppContext";
 import FooterLessons from "./FooterLessons/FooterLessons";
 import Header from "../components/Header/Header";
+
+import { useAppContext } from "../../components/context/AppContext";
 
 function LessonsVideo() {
     useEffect(() => {

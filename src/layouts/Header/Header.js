@@ -1,11 +1,15 @@
 import React from "react";
-import classNames from "classnames/bind";
-import styles from "./header.module.scss";
 import { Link } from "react-router-dom";
+import classNames from "classnames/bind";
+
 import img from "../../../assets/img";
-import Search from "./Search/Search";
 import icon from "../../../assets/icon";
+
+import styles from "./header.module.scss";
+
+import Search from "./Search/Search";
 import MiniGhiChu from "./MiniGhiChu/MiniGhiChu";
+
 import { useAppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);

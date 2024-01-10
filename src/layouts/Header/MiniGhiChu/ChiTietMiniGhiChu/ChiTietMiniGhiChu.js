@@ -1,11 +1,13 @@
-import React from "react";
-import classNames from "classnames/bind";
-import styles from "./ChiTietMiniGhiChu.module.scss";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useAppContext } from "../../../../../components/context/AppContext";
+import classNames from "classnames/bind";
+
 import img from "../../../../../assets/img";
 import icon from "../../../../../assets/icon";
+
+import styles from "./ChiTietMiniGhiChu.module.scss";
+
+import { useAppContext } from "../../../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 

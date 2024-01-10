@@ -1,9 +1,10 @@
-import React from "react";
-import img from "../../assets/img";
-import classNames from "classnames/bind";
-import styles from "./notFound.module.scss";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import classNames from "classnames/bind";
+
+import img from "../../assets/img";
+
+import styles from "./notFound.module.scss";
 
 const cx = classNames.bind(styles);
 

@@ -1,12 +1,15 @@
-import classNames from "classnames/bind";
-import styles from "./ghichu.module.scss";
-import Header from "../components/Header/Header";
-import { useAppContext } from "../../components/context/AppContext";
-import ChiTiet from "./ChiTiet/ChiTiet";
-import icon from "../../assets/icon";
+import React, { useEffect } from "react";
 import axios from "axios";
-import { useEffect } from "react";
-import React from "react";
+import classNames from "classnames/bind";
+
+import Header from "../components/Header/Header";
+import ChiTiet from "./ChiTiet/ChiTiet";
+
+import icon from "../../assets/icon";
+
+import styles from "./ghichu.module.scss";
+
+import { useAppContext } from "../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 

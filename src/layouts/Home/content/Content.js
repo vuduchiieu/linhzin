@@ -1,8 +1,11 @@
 import React from "react";
-import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
-import styles from "./content.module.scss";
+import classNames from "classnames/bind";
+
 import img from "../../../assets/img";
+
+import styles from "./content.module.scss";
+
 import { useAppContext } from "../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);

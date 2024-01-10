@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
-import styles from "./search.module.scss";
-import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import { useAppContext } from "../../../../components/context/AppContext";
+
 import icon from "../../../../assets/icon";
+
+import styles from "./search.module.scss";
+
+import { useAppContext } from "../../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 

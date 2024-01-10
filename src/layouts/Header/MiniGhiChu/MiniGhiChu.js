@@ -1,11 +1,14 @@
-import React from "react";
-import classNames from "classnames/bind";
-import styles from "./miniGhiChu.module.scss";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import ChiTietMiniGhiChu from "./ChiTietMiniGhiChu/ChiTietMiniGhiChu";
-import { useAppContext } from "../../../../components/context/AppContext";
+import classNames from "classnames/bind";
+
 import icon from "../../../../assets/icon";
+
+import styles from "./miniGhiChu.module.scss";
+
+import ChiTietMiniGhiChu from "./ChiTietMiniGhiChu/ChiTietMiniGhiChu";
+
+import { useAppContext } from "../../../../components/context/AppContext";
 
 const cx = classNames.bind(styles);
 
