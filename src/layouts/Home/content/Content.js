@@ -47,10 +47,6 @@ function Content() {
                                 to={item.to}
                                 key={i}
                                 className={cx("lessons")}
-                                style={{
-                                    cursor: "default",
-                                    opacity: 1,
-                                }}
                             >
                                 <div className={cx("title")}>
                                     <h3>{item.title}</h3>

@@ -245,24 +245,22 @@ const Contexts = ({ children }) => {
 
     const [textLessons, setTextLessons] = useState([
         {
-            title: "Đang cập nhật...",
-            img: "",
-            length: "",
-            to: "",
+            title: "Giải phẫu người",
+            to: "/text/giaiphaunguoi",
         },
         {
-            title: "Đang cập nhật...",
-            img: "",
-            length: "",
-            to: "",
+            title: "Tai mũi họng",
+            to: "/text/tai mũi họng",
         },
         {
-            title: "Đang cập nhật...",
-            img: "",
-            length: "",
+            title: "Đang cập nhật....",
             to: "",
         },
     ]);
+
+    const [giaiPhauNguoi, setGiaiPhauNguoi] = useState([]);
+
+    const [taiMuiHong, setTaiMuiHong] = useState([]);
 
     const [refreshData, setRefreshData] = useState(true);
     const [listGhiChu, setListGhiChu] = useState([]);
@@ -341,6 +339,8 @@ const Contexts = ({ children }) => {
                 longNguc,
                 thanKinhTrungUong,
                 textLessons,
+                taiMuiHong,
+                giaiPhauNguoi,
                 setRefreshData,
                 listGhiChu,
                 setListGhiChu,

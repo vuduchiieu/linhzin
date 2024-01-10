@@ -7,6 +7,7 @@ import LessonsVideo from "./layouts/LessonsVideo/LessonsVideo";
 import GhiChu from "./layouts/GhiChu/GhiChu";
 import NotFound from "./components/NotFound/NotFound";
 import { useAppContext } from "./components/context/AppContext";
+import LessonsText from "./layouts/LessonsText/LessonsText";
 
 const cx = classNames.bind();
 function App() {
@@ -23,6 +24,10 @@ function App() {
                     <Route
                         path="/lessons/:lessonsId"
                         element={<LessonsVideo />}
+                    ></Route>
+                    <Route
+                        path="/text/:lessonsId"
+                        element={<LessonsText />}
                     ></Route>
                     <Route path="/ghichu" element={<GhiChu />} />
                     <Route path="*" element={<NotFound />} />
