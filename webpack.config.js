@@ -8,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, "build"),
         filename: "index.js",
         libraryTarget: "umd",
+        clean: true,
     },
     module: {
         rules: [
@@ -83,4 +84,7 @@ module.exports = {
             ],
         }),
     ],
+    devServer: {
+        historyApiFallback: true, // Thêm historyApiFallback tại đây
+    },
 };

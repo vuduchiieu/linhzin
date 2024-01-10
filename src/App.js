@@ -18,14 +18,13 @@ function App() {
                 })}
             >
                 <Routes>
-                    <Route exact={true} path="/" element={<Home />} />
+                    <Route path="/" element={<Home />} />
                     <Route
-                        exact={true}
                         path="/lessons/:lessonsId"
                         element={<LessonsVideo />}
                     ></Route>
-                    <Route exact={true} path="/ghichu" element={<GhiChu />} />
-                    <Route exact={true} path="*" element={<NotFound />} />
+                    <Route path="/ghichu" element={<GhiChu />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>
         </Router>
