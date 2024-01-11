@@ -48,9 +48,10 @@ function Content() {
                                 key={i}
                                 className={cx("lessons")}
                             >
+                                <img src={item.img} />
                                 <div className={cx("title")}>
                                     <h3>{item.title}</h3>
-                                    <p>{item.length} </p>
+                                    <p>{item.length} bài</p>
                                 </div>
                             </Link>
                         ))}

@@ -10,6 +10,7 @@ const img = {
     dauMatCo: require("./dau-mat-co.jpg"),
     longNguc: require("./long-nguc.jpg"),
     tktw: require("./tktw.jpg"),
+    giaiphaunguoi: require("./giai-phau-nguoi.jpg"),
     notFound: require("./NotFound.gif"),
     loading: require("./loading.gif"),
 };

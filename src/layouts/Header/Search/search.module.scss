@@ -27,6 +27,9 @@
 
         .info {
             h3 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 32px;
@@ -94,9 +97,9 @@
             .info {
                 h3 {
                     overflow: hidden;
+                    white-space: nowrap;
                     text-overflow: ellipsis;
                     height: 100%;
-                    white-space: nowrap;
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 32px;

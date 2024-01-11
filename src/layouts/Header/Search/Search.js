@@ -24,6 +24,7 @@ function Search() {
         dauMatCo,
         longNguc,
         thanKinhTrungUong,
+        giaiPhauNguoi,
         isDarkMode,
     } = useAppContext();
     useEffect(() => {
@@ -38,6 +39,7 @@ function Search() {
             ...dauMatCo,
             ...longNguc,
             ...thanKinhTrungUong,
+            ...giaiPhauNguoi,
         ].filter((item) =>
             item.title.toLowerCase().includes(searchValue.toLowerCase())
         );
