@@ -81,7 +81,7 @@ const Contexts = ({ children }) => {
         {
             id: 0,
             title: "Tai mũi họng",
-            src: "https://www.youtube.com/embed/84us9xLmn7M?si=Hiuctfqfy4HvZGmJ",
+            src: "",
             to: "/text/taimuihong",
         },
     ]);
